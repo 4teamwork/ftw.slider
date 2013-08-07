@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="ftw.slider">
+
+  <browser:viewlet
+      for="*"
+      name="ftw.slider.slider"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+      class=".slider.SliderViewlet"
+      permission="zope2.View"
+      />
+
+</configure>

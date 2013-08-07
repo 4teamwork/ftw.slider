@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="ftw.slider">
+
+  <include file="permissions.zcml" />
+
+  <include package=".browser" />
+  <include package=".viewlets" />
+
+  <!-- <i18n:registerTranslations directory="locales" /> -->
+
+  <genericsetup:registerProfile
+      name="default"
+      title="ftw.slider"
+      directory="profiles/default"
+      description="Installs the ftw.slider package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="ftw.slider">
+
+  <permission
+      id="ftw.slider.AddContainer"
+      title="ftw.slider: Add Container"
+      />
+
+  <permission
+      id="ftw.slider.AddPane"
+      title="ftw.slider: Add Pane"
+      />
+
+</configure>
