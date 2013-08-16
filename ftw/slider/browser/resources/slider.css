@@ -25,6 +25,7 @@
   top: 0;
   background-color: rgba(255,255,255,0.8);
   padding: 1em;
+  z-index: 1;
 }
 .sliderPane:hover .prev,
 .sliderPane:hover .next{
