@@ -13,6 +13,7 @@ jQuery(function($) {
 
   var root = $("#slider-wrapper").scrollable({
     circular: true,
+    touch: false,
     speed: 600
   }).autoscroll({
     autoplay: true,
