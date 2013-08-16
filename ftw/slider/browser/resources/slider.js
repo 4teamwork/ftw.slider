@@ -12,10 +12,11 @@ jQuery(function($) {
   });
 
   var root = $("#slider-wrapper").scrollable({
-    circular: true
+    circular: true,
+    speed: 600
   }).autoscroll({
     autoplay: true,
-    interval: 2000
+    interval: 5000
   }).navigator({
     navi: '#slider-navi'
   });
