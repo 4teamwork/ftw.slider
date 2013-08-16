@@ -1,7 +1,12 @@
 #slider-wrapper {
   position: relative;
   overflow: hidden;
-  width: 600px;
+  width: 870px;
+  max-width: 870px;
+  height: auto;
+  margin-bottom: 1em;
+}
+#slider-wrapper img {
   height: auto;
 }
 
@@ -12,7 +17,8 @@
 }
 #slider-wrapper #slider-panes div.sliderPane {
   float: left;
-  width: 600px;
+  width: 870px;
+  max-width: 870px;
   overflow: hidden;
   position: relative;
 }
@@ -40,7 +46,7 @@
 
 .sliderText {
   position: absolute;
-  bottom: 0;
+  bottom: 2em;
   right: 0;
   background: rgba(255,255,255,0.8);
   width: 50%;
@@ -48,9 +54,16 @@
 }
 
 
+#slider-navi {
+  position: absolute;
+  margin-top: -2.5em;
+  margin-left: 0.5em;
+  z-index: 1;
+}
 #slider-navi a {
   margin-top: -1em;
-  background: red;
+  background: #000;
+  opacity: 0.4;
   width: 8px;
   height: 8px;
   display: block;
@@ -62,5 +75,5 @@
   -moz-border-radius: 4px;
 }
 #slider-navi a.active {
-  background: blue;
+  opacity: 1;
 }

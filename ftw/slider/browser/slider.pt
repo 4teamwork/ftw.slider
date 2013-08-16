@@ -9,7 +9,7 @@
       <a class="next">next</a>
 
       <div class="sliderImage"
-           tal:content="structure pane/@@images/image/large"
+           tal:content="structure pane/@@images/image"
            />
       <div class="sliderText"
            tal:condition="pane/text"
