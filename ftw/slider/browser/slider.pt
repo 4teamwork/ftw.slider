@@ -1,6 +1,5 @@
 <div id="slider-wrapper"
      tal:define="panes view/panes">
-
   <div id="slider-panes">
     <div tal:repeat="pane panes"
          class="sliderPane">

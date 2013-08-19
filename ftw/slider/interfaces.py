@@ -1,7 +1,6 @@
 from zope.interface import Interface
 
 
-CONTAINER_ID = 'slider'
 SLIDER_VIEW = 'slider_view'
 
 

@@ -1,18 +1,16 @@
-from ftw.slider.interfaces import CONTAINER_ID, SLIDER_VIEW
+from ftw.slider.interfaces import SLIDER_VIEW
 from plone.app.layout.viewlets import ViewletBase
 
 
 class SliderViewlet(ViewletBase):
 
     def render(self):
-        if self.available():
-            container = self.context.restrictedTraverse("%s/%s" % (
-                    CONTAINER_ID, SLIDER_VIEW), None)
-            if container:
-                return container()
+        containers = self.context.getFolderContents(
+            contentFilter={'portal_type': 'ftw.slider.Container'},
+            full_objects=True)
+        self.container = len(containers) > 0 and containers[0] or None
+        if self.container:
+            view = self.container.restrictedTraverse(SLIDER_VIEW, None)
+            if view:
+                return view()
         return ''
-
-    def available(self):
-        if CONTAINER_ID in self.context.objectIds():
-            return self.context.restrictedTraverse(CONTAINER_ID, None)
-        return False

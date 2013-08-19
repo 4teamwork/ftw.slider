@@ -12,7 +12,7 @@
   <include package=".browser" />
   <include package=".viewlets" />
 
-  <!-- <i18n:registerTranslations directory="locales" /> -->
+  <i18n:registerTranslations directory="locales" />
 
   <genericsetup:registerProfile
       name="default"
