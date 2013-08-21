@@ -86,3 +86,10 @@
 #slider-navi a.active {
   opacity: 1;
 }
+
+@media screen and (max-width: 767px) {
+  #slider-wrapper .sliderText {
+    position: static;
+    width: 100%;
+  }
+}
