@@ -38,3 +38,7 @@ Copyright
 This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 
 ``ftw.slider`` is licensed under GNU General Public License, version 2.
+
+.. image:: https://cruel-carlota.pagodabox.com/d9c95f38d2ad57caaf293a9072e1f81d
+   :alt: githalytics.com
+   :target: http://githalytics.com/4teamwork/ftw.slider
