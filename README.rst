@@ -7,10 +7,29 @@ In each slider-pane you can define
 - An image
 - HTML Text
 
-Configuration
-=============
 
-- coming soon
+Installation
+============
+
+
+- Add ``ftw.slider`` to your buildout configuration:
+
+::
+
+    [instance]
+    eggs +=
+        ftw.slider
+
+- Run `bin/buildout`
+
+- Install the generic import profile.
+
+
+Compatibility
+-------------
+
+Runs with `Plone <http://www.plone.org/>`_ `4.3`.
+
 
 Screenshots
 ===========
