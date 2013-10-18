@@ -11,9 +11,11 @@
            tal:content="structure pane/@@images/image"
            />
       <div class="sliderText"
-           tal:condition="pane/text"
-           tal:content="structure pane/text/raw"
-           />
+           tal:condition="pane/text">
+        <h2 tal:condition="pane/title" tal:content="pane/title"
+            class="documentFirstHeading"/>
+        <span tal:content="structure pane/text/output" />
+      </div>
     </div>
 
   </div>
