@@ -1,9 +1,13 @@
 from ftw.slider import _
 from ftw.slider.interfaces import IPane
-from plone.namedfile.field import NamedImage
 from plone.app.textfield import RichText
 from plone.dexterity.content import Container
+from plone.directives import form
 from plone.directives.form import Schema
+from plone.formwidget.contenttree import ContentTreeFieldWidget
+from plone.formwidget.contenttree import PathSourceBinder
+from plone.namedfile.field import NamedImage
+from z3c.relationfield.schema import RelationChoice
 from zope.interface import implements
 
 
@@ -16,6 +20,13 @@ class IPaneSchema(Schema):
     image = NamedImage(
         title=_(u'label_image', default='Image'),
         required=True,
+        )
+    form.widget(link=ContentTreeFieldWidget)
+    link = RelationChoice (
+        title=_(u'label_link', default=u'Link'),
+        description=_(u'help_link', default=u''),
+        required=False,
+        source=PathSourceBinder()
         )
 
 
