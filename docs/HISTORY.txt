@@ -5,6 +5,9 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Added a link field to link the whole pane.
+  [Julian Infanger]
+
 - Show title in slider pane if there is text to display.
   [Julian Infanger]
 

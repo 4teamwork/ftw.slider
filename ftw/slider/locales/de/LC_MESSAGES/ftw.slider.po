@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-08-19 05:42+0000\n"
+"POT-Creation-Date: 2013-11-04 14:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,20 +20,31 @@ msgstr "Slider Ordner"
 msgid "Slider Pane"
 msgstr "Slider Bild"
 
-#: ./ftw/slider/browser/slider.py:26
+#: ./ftw/slider/browser/slider.py:27
 msgid "There is already a slider pane in this context"
 msgstr "Es kann jeweils nur ein Slider Ordner erstellt werden"
 
-#: ./ftw/slider/contents/pane.py:13
+#: ./ftw/slider/contents/pane.py:27
+msgid "help_link"
+msgstr ""
+
+#: ./ftw/slider/contents/pane.py:17
 msgid "help_text"
 msgstr ""
 
 #. Default: "Image"
-#: ./ftw/slider/contents/pane.py:17
+#: ./ftw/slider/contents/pane.py:21
 msgid "label_image"
 msgstr "Bild"
 
+#. Default: "Link"
+#: ./ftw/slider/contents/pane.py:26
+msgid "label_link"
+msgstr "Link"
+
 #. Default: "Text"
-#: ./ftw/slider/contents/pane.py:12
+#: ./ftw/slider/contents/pane.py:16
 msgid "label_text"
 msgstr "Text"
+
+
