@@ -5,6 +5,9 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Add a simple description how to use ftw.slider into README.
+  [Julian Infanger]
+
 - Added a link field to link the whole pane.
   [Julian Infanger]
 

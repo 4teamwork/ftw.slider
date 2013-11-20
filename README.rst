@@ -30,6 +30,13 @@ Compatibility
 
 Runs with `Plone <http://www.plone.org/>`_ `4.3`.
 
+How to use ftw.slider
+=====================
+
+If you want to display a slideshow on your content, just create a `ftw.slider.Container` and add some `ftw.slider.Pane`.
+
+There is a viewlet which checks your content for a slider-container and displays its containing panes.
+
 
 Screenshots
 ===========
