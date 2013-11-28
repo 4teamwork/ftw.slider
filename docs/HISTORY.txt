@@ -5,6 +5,10 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Do not display the slider, if there are no images.
+  This caused a javascript error.
+  [Julian Infanger]
+
 - Add a simple description how to use ftw.slider into README.
   [Julian Infanger]
 

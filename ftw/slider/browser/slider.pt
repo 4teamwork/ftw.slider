@@ -1,30 +1,33 @@
-<div id="slider-wrapper"
-     tal:define="panes view/panes;
-                 portal context/@@plone_portal_state/portal;">
-  <div id="slider-panes">
-    <div tal:repeat="pane panes"
-         class="sliderPane">
+<tal:slider define="panes view/panes;
+                    portal context/@@plone_portal_state/portal;">
+  <div id="slider-wrapper"
+       tal:condition="panes">
+    <div id="slider-panes">
+      <div tal:repeat="pane panes"
+           class="sliderPane">
 
-      <a class="prev">&nbsp;</a>
-      <a class="next">&nbsp;</a>
+        <a class="prev">&nbsp;</a>
+        <a class="next">&nbsp;</a>
 
-      <a tal:omit-tag="not:pane/link"
-         tal:attributes="href string:${portal/absolute_url}${pane/link}">
-        <div class="sliderImage"
-             tal:content="structure pane/@@images/image"
-             />
-        <div class="sliderText"
-             tal:condition="pane/text">
-          <h2 tal:condition="pane/title" tal:content="pane/title"
-              class="documentFirstHeading"/>
-          <span tal:content="structure pane/text/output" />
-        </div>
-      </a>
+        <a tal:omit-tag="not:pane/link"
+           tal:attributes="href string:${portal/absolute_url}${pane/link}">
+          <div class="sliderImage"
+               tal:content="structure pane/@@images/image"
+               />
+          <div class="sliderText"
+               tal:condition="pane/text">
+            <h2 tal:condition="pane/title" tal:content="pane/title"
+                class="documentFirstHeading"/>
+            <span tal:content="structure pane/text/output" />
+          </div>
+        </a>
+      </div>
+
     </div>
 
   </div>
+  <div id="slider-navi"></div>
 
-</div>
-<div id="slider-navi"></div>
+  <div class="visualClear"><!-- --></div>
 
-<div class="visualClear"><!-- --></div>
+</tal:slider>
