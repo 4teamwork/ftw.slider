@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.1 (unreleased)
+1.1.0 (2013-12-13)
 ------------------
 
 - Do not display the slider, if there are no images.
