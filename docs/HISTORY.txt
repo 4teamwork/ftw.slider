@@ -5,7 +5,11 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Do no use RelationChoice (z3c.relationfield) if you don't use Relations.
+  I guess we should use plone.app.relationfield.
+  The old implementation did not make any sense. Storing string value in a
+  RelationField.
+  [mathias.leimgruber]
 
 
 1.1.0 (2013-12-13)
