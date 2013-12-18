@@ -7,7 +7,7 @@ from plone.directives.form import Schema
 from plone.formwidget.contenttree import ContentTreeFieldWidget
 from plone.formwidget.contenttree import PathSourceBinder
 from plone.namedfile.field import NamedImage
-from z3c.relationfield.schema import RelationChoice
+from zope import schema
 from zope.interface import implements
 
 
@@ -22,7 +22,7 @@ class IPaneSchema(Schema):
         required=True,
         )
     form.widget(link=ContentTreeFieldWidget)
-    link = RelationChoice (
+    link = schema.Choice (
         title=_(u'label_link', default=u'Link'),
         description=_(u'help_link', default=u''),
         required=False,
