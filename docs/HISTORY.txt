@@ -5,6 +5,10 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Only enable slider behaviour if there are at least two panes.
+  Otherwise display the single slider pane without the slider controls.
+  [Julian Infanger]
+
 - Do no use RelationChoice (z3c.relationfield) if you don't use Relations.
   I guess we should use plone.app.relationfield.
   The old implementation did not make any sense. Storing string value in a

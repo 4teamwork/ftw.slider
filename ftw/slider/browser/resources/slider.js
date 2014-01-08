@@ -11,7 +11,7 @@ jQuery(function($) {
     adjust_slider_size();
   });
 
-  var root = $("#slider-wrapper").scrollable({
+  var root = $("#slider-wrapper.enabled").scrollable({
     circular: true,
     touch: false,
     speed: 600
