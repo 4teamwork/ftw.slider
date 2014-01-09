@@ -1,13 +1,17 @@
 <tal:slider define="panes view/panes;
+                    slider_enabled python:len(panes) > 1;
                     portal context/@@plone_portal_state/portal;">
   <div id="slider-wrapper"
+       tal:attributes="class python:slider_enabled and 'enabled' or None"
        tal:condition="panes">
     <div id="slider-panes">
       <div tal:repeat="pane panes"
            class="sliderPane">
 
-        <a class="prev">&nbsp;</a>
-        <a class="next">&nbsp;</a>
+        <tal:slider_enabled condition="slider_enabled">
+          <a class="prev">&nbsp;</a>
+          <a class="next">&nbsp;</a>
+        </tal:slider_enabled>
 
         <a tal:omit-tag="not:pane/link"
            tal:attributes="href string:${portal/absolute_url}${pane/link}">
@@ -26,7 +30,7 @@
     </div>
 
   </div>
-  <div id="slider-navi"></div>
+  <div id="slider-navi" tal:condition="slider_enabled"></div>
 
   <div class="visualClear"><!-- --></div>
 
