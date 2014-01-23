@@ -2,6 +2,7 @@
 <object name="ftw.slider.Container"
         meta_type="Dexterity FTI"
         xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        xmlns:zcml="http://xml.zope.org/namespaces/zcml"
         i18n:domain="ftw.slider" >
 
   <!-- Basic metadata -->
@@ -29,6 +30,8 @@
     <element value="plone.app.dexterity.behaviors.metadata.IBasic" />
     <element value="plone.app.content.interfaces.INameFromTitle" />
     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
+    <element zcml:condition="installed plone.multilingualbehavior"
+             value="plone.multilingualbehavior.interfaces.IDexterityTranslatable" />
   </property>
 
   <!-- View information -->
