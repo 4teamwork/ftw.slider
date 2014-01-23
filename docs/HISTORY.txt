@@ -5,6 +5,9 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Added support for plone.app.multilingual.
+  [Julian Infanger]
+
 - Only enable slider behaviour if there are at least two panes.
   Otherwise display the single slider pane without the slider controls.
   [Julian Infanger]
