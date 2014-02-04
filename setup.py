@@ -36,6 +36,7 @@ setup(name='ftw.slider',
       zip_safe=False,
 
       install_requires=[
+        'ftw.upgrade',
         'setuptools',
         'Products.GenericSetup',
         'Products.CMFCore',

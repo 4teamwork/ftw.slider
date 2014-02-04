@@ -5,6 +5,11 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Package adjustments
+  - Remove ftw.slider.Container from navigation
+  - Remove ftw.slider.Container and ftw.slider.Pane from searchable types
+  [elio.schmutz]
+
 - Added support for plone.app.multilingual.
   [Julian Infanger]
 
