@@ -5,6 +5,8 @@ version = '1.1.1.dev0'
 
 tests_require = [
     'ftw.testing [splinter]',
+    'ftw.builder',
+    'ftw.testbrowser',
     'plone.app.testing',
     'plone.resource',
     'unittest2',
