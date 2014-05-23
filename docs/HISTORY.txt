@@ -2,8 +2,13 @@ Changelog
 =========
 
 
-1.2.1 (unreleased)
+2.0.0 (unreleased)
 ------------------
+
+- Use slick for slider.
+  https://github.com/kenwheeler/slick
+  This supports swipe on iphone, fade effect, ...
+  [Julian Infanger]
 
 - Cleaned up pep8 violations.
   [Julian Infanger]
