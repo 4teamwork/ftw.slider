@@ -14,6 +14,7 @@ Changelog
 - Get the parents slider if you are on a default page.
   If the context is a page which is set as default layout page, try to
   get the parents slider container to display.
+  [Julian Infanger]
 
 - Package adjustments
   - Remove ftw.slider.Container from navigation
