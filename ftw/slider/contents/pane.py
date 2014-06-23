@@ -22,7 +22,7 @@ class IPaneSchema(Schema):
         required=True,
         )
     form.widget(link=ContentTreeFieldWidget)
-    link = schema.Choice (
+    link = schema.Choice(
         title=_(u'label_link', default=u'Link'),
         description=_(u'help_link', default=u''),
         required=False,
