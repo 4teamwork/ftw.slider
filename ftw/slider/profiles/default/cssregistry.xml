@@ -3,4 +3,7 @@
   <stylesheet id="++resource++ftw.slider/slider.css"
               enabled="True"
               />
+  <stylesheet id="++resource++ftw.slider/slick.css"
+              enabled="True"
+              />
 </object>
