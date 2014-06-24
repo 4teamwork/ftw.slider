@@ -1,11 +1,13 @@
 Introduction
 ============
 
-This product let you create a simple slideshow.
-In each slider-pane you can define
+This product let you create a simple slideshow, using `slick <http://kenwheeler.github.io/slick>`_.
+
+In each slider-pane you can define:
 
 - An image
-- HTML Text
+- HTML text
+- A link
 
 
 Installation
