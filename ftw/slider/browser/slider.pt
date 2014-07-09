@@ -8,11 +8,6 @@
       <div tal:repeat="pane panes"
            class="sliderPane">
 
-        <tal:slider_enabled condition="slider_enabled">
-          <a class="prev">&nbsp;</a>
-          <a class="next">&nbsp;</a>
-        </tal:slider_enabled>
-
         <a tal:omit-tag="not:pane/link"
            tal:attributes="href string:${portal/absolute_url}${pane/link}">
           <div class="sliderImage"
@@ -30,7 +25,6 @@
     </div>
 
   </div>
-  <div id="slider-navi" tal:condition="slider_enabled"></div>
 
   <div class="visualClear"><!-- --></div>
 
