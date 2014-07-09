@@ -5,7 +5,7 @@ function adjust_slider_size() {
 }
 
 jQuery(function($) {
-  $('#slider-panes').slick({
+  $('.enabled #slider-panes').slick({
     fade: true,
     autoplay: true,
     dots: true
