@@ -83,3 +83,58 @@
 }
 
 /* @end */
+
+/* @group slider block view */
+
+li.slAction > a.layout_dummy-dummy-slider {
+  background-image: url(++resource++ftw.slider/slider_block.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.sliderGallery .box .frame {
+  border: 1px solid #999;
+  background: #ececec;
+  position: relative;
+}
+.sliderGallery img {
+  margin: 0 auto;
+  position: relative;
+}
+.sliderGallery div.imgTitle {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  background: #FFF;
+  background: rgba(255,255,255,0.7);
+}
+.sliderGallery div.imgTitle > h3 {
+  padding: 0.25em;
+}
+#content .sliderGallery div.imgDescription {
+  /* position: absolute; */
+  width: 100%;
+  /* bottom: 0; */
+  background: #FFF;
+  background: rgba(255,255,255,0.7);
+}
+#content .sliderGallery div.imgDescription > div {
+  padding: 0.5em;
+  padding-top: 0;
+}
+.sliderGallery .slick-prev,
+.sliderGallery .slick-next {
+  display: block !important;
+  top: 0;
+  background: none;
+  height: 30px;
+}
+  #content .sliderGallery div.imgDescription > div.imgNumber {
+  padding: 0.25em 0;
+  text-align: center;
+}
+
+/* @end */

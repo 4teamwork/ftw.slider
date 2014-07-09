@@ -15,6 +15,15 @@
       permission="zope2.View"
       />
 
+  <configure zcml:condition="installed ftw.contentpage">
+    <browser:page
+        for="ftw.contentpage.interfaces.IListingBlock"
+        name="block_view-slider"
+        class=".listingblock_slider.ListingBlockSlider"
+        template="listingblock_slider.pt"
+        permission="zope2.View" />
+  </configure>
+
   <adapter
       for="Products.CMFCore.interfaces.IFolderish
            Products.CMFDefault.interfaces.ICMFDefaultSkin

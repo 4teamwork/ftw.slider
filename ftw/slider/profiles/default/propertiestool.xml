@@ -11,4 +11,9 @@
     <element value="ftw.slider.Container" />
   </property>
 </object>
+ <object name="imaging_properties">
+  <property name="allowed_sizes" type="lines" purge="False">
+   <element value="sliderblock 1200:800"/>
+  </property>
+ </object>
 </object>

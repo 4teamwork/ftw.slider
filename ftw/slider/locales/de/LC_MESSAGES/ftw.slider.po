@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-11-04 14:33+0000\n"
+"POT-Creation-Date: 2014-07-10 13:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,11 @@ msgstr "Es kann jeweils nur ein Slider Ordner erstellt werden"
 msgid "help_link"
 msgstr ""
 
+#. Default: "Be careful changing. This is the configuration for the diashow javascript. Available options: <a href=\"https://github.com/kenwheeler/slick/#options\">github.com/kenwheeler/slick/#options</a> <br />If all goes wrong, use the default: {autoplay: true, autoplaySpeed: 3000}"
+#: ./ftw/slider/extender.py:26
+msgid "help_slicksettings"
+msgstr "Ändern mit Vorsicht! Hier können Optionen für das JavaScript der Diashow definiert werden. Mögliche Optionen: <a href=\"https://github.com/kenwheeler/slick/#options\">github.com/kenwheeler/slick/#options</a> <br />Läuft alles Schief, Standard verwenden: {\"autoplay\": true, \"autoplaySpeed\": 3000}"
+
 #: ./ftw/slider/contents/pane.py:17
 msgid "help_text"
 msgstr ""
@@ -42,9 +47,12 @@ msgstr "Bild"
 msgid "label_link"
 msgstr "Link"
 
+#. Default: "Settings for diashow"
+#: ./ftw/slider/extender.py:25
+msgid "label_slicksettings"
+msgstr "Einstellungen für Diashow"
+
 #. Default: "Text"
 #: ./ftw/slider/contents/pane.py:16
 msgid "label_text"
 msgstr "Text"
-
-

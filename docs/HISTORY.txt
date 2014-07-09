@@ -2,8 +2,12 @@ Changelog
 =========
 
 
-2.0.1 (unreleased)
+2.1.0 (unreleased)
 ------------------
+
+- Added slider block view for listingblock.
+  Only is registered if ftw.contentpage is installed.
+  [Julian Infanger]
 
 - Added missing upgradestep to use slick resources.
   [Julian Infanger]
