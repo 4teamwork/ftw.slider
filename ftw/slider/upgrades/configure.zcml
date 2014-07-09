@@ -14,4 +14,14 @@
         destination="1110"
         directory="profiles/1110"
         />
+
+    <!-- 1110 -> 1111 -->
+    <upgrade-step:importProfile
+        title="Add slick resources"
+        profile="ftw.slider:default"
+        source="1110"
+        destination="1111"
+        directory="profiles/1111"
+        />
+
 </configure>
