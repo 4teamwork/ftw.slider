@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+  <javascript id="++resource++ftw.slider/slick.min.js"
+              insert-before="++resource++ftw.slider/slider.js"
+              enabled="True"
+              />
+</object>
