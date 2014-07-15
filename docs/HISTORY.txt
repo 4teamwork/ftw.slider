@@ -17,6 +17,7 @@ Changelog
 ------------------
 
 - Use slick for slider.
+  This requires Plone 4.3!
   https://github.com/kenwheeler/slick
   This supports swipe on iphone, fade effect, ...
   [Julian Infanger]
