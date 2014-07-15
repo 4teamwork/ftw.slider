@@ -33,4 +33,13 @@
         directory="profiles/1112"
         />
 
+    <!-- 1112 -> 1113 -->
+    <upgrade-step:importProfile
+        title="Register slider layout for listingblock."
+        profile="ftw.slider:default"
+        source="1112"
+        destination="1113"
+        directory="profiles/1113"
+        />
+
 </configure>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="ListingBlock"
+        meta_type="Factory-based Type Information with dynamic views">
+  <action title="Slider" action_id="sl-dummy-dummy-slider"
+          category="sl-layouts" condition_expr="" description="" icon_expr=""
+          link_target="" url_expr="string:${here/absolute_url}/block_control"
+          visible="True">
+    <permission value="Modify portal content"/>
+  </action>
+</object>
