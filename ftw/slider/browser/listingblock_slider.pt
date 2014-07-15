@@ -1,0 +1,29 @@
+<script type="text/javascript" tal:content="view/init_slick" />
+
+<div class="simplelayout-block-wrapper ListingBlock"
+     tal:define="imgs python:view.get_images()">
+  <a tal:attributes="name here/id" ></a>
+  <h2 tal:content="here/Title" tal:condition="here/getShowTitle|python:True">Title</h2>
+
+  <div class="sl-text-wrapper">
+    <div class="sliderGallery clearfix">
+      <div class="box" tal:repeat="img imgs">
+        <div class="frame sl-img-wrapper">
+          <div class="imgTitle">
+            <h3 tal:content="img/Title" />
+          </div>
+          <img tal:replace="structure img/@@images/image/sliderblock" />
+          <div class="imgDescription"
+               tal:define="img_nr python: repeat['img'].index + 1;
+                           img_len python: len(imgs)">
+            <div class="imgNumber" tal:content="string: ${img_nr} / ${img_len}" />
+            <div tal:condition="img/Description"
+                 tal:content="img/Description" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="visualClear"><!-- --></div>

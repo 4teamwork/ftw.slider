@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '2.0.1.dev0'
+version = '2.1.0dev0'
 
 tests_require = [
     'ftw.testing [splinter]',
@@ -49,6 +49,7 @@ setup(name='ftw.slider',
         'plone.dexterity',
         'plone.app.dexterity',
         'plone.directives.form',
+        'archetypes.schemaextender',
         ],
       tests_require=tests_require,
       extras_require=dict(tests=tests_require),

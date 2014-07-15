@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-11-04 14:33+0000\n"
+"POT-Creation-Date: 2014-07-10 13:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,6 +33,11 @@ msgstr ""
 msgid "help_link"
 msgstr ""
 
+#. Default: "Be careful changing. This is the configuration for the diashow javascript. Available options: <a href=\"https://github.com/kenwheeler/slick/#options\">github.com/kenwheeler/slick/#options</a> <br />If all goes wrong, use the default: {autoplay: true, autoplaySpeed: 3000}"
+#: ./ftw/slider/extender.py:26
+msgid "help_slicksettings"
+msgstr ""
+
 #: ./ftw/slider/contents/pane.py:17
 msgid "help_text"
 msgstr ""
@@ -45,6 +50,11 @@ msgstr ""
 #. Default: "Link"
 #: ./ftw/slider/contents/pane.py:26
 msgid "label_link"
+msgstr ""
+
+#. Default: "Settings for diashow"
+#: ./ftw/slider/extender.py:25
+msgid "label_slicksettings"
 msgstr ""
 
 #. Default: "Text"

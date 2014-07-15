@@ -9,6 +9,10 @@ In each slider-pane you can define:
 - HTML text
 - A link
 
+If `ftw.contentpage <http://github.com/4teamwork/ftw.contentpage>`_ is installed there will be registered a new view for the `ListingBlock` displaying images in a carousel.
+See last screenshot.
+
+
 
 Installation
 ============
@@ -50,6 +54,10 @@ Using ftw.slider with default plone:
 The slideshow is responsive (here OneGovBox as example):
 
 .. image:: https://github.com/4teamwork/ftw.slider/raw/master/docs/screenshot_onegov.png
+
+The `ftw.contentpage` carousel block with default plone:
+
+.. image:: https://github.com/4teamwork/ftw.slider/raw/master/docs/screenshot_listingblock_plone.png
 
 Links
 =====

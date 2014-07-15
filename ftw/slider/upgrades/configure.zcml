@@ -24,4 +24,13 @@
         directory="profiles/1111"
         />
 
+    <!-- 1111 -> 1112 -->
+    <upgrade-step:importProfile
+        title="Add image scale for slider listing block"
+        profile="ftw.slider:default"
+        source="1111"
+        destination="1112"
+        directory="profiles/1112"
+        />
+
 </configure>
