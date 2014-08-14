@@ -1,0 +1,9 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:theme="http://namespaces.zope.org/plonetheme.onegov">
+
+  <include package="plonetheme.onegov" file="configure.zcml" />
+
+  <theme:add_scss path="slider.sass" />
+
+</configure>

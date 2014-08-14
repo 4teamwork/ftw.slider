@@ -1,0 +1,57 @@
+$slider-bg-start: $global-navigation-border-color;
+$slider-bg-end: darken($slider-bg-start, 10%);
+$slider-color: contrast($slider-bg-start, #FFF, #000);
+
+.slick-dots li button:before {
+  color: transparent;
+}
+#content ul.slick-dots li.slick-active {
+  background-color: $slider-bg-start;
+}
+#slider-wrapper .sliderText {
+  @include gradient($slider-bg-start, $slider-bg-end);
+  color: $slider-color;
+  height: 100px;
+  width: 50%;
+  position: absolute;
+  right:0;
+  bottom: 0;
+  padding: 1em;
+  margin-bottom: 2em;
+  overflow: hidden;
+  & a {
+    color: $slider-color;
+  }
+}
+#slider-panes .slick-prev {
+  @include icon($char: "");
+}
+#slider-panes .slick-next {
+  @include icon($char: "");
+}
+#slider-panes .slick-prev,
+#slider-panes .slick-next {
+  &:before {
+    font-size: 1.75*($font-size);
+    vertical-align: middle;
+    color: $link-color;
+  }
+  &:hover:before {
+    color: $link-color-hover;
+  }
+}
+
+
+
+@media screen and (max-width: $screen-tablet) {
+
+    #slider-panes {
+      background: $slider-bg-end;
+    }
+    #container #slider-wrapper .sliderText {
+      position: relative;
+      width: 96%;
+      padding: 2%;
+    }
+
+}
