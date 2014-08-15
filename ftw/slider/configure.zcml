@@ -30,5 +30,8 @@
              name="ftw.slider.slicksettings.extender" />
   </configure>
 
+  <configure zcml:condition="installed plonetheme.onegov">
+    <include package=".sass" />
+  </configure>
 
 </configure>

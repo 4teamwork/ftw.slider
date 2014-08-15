@@ -5,7 +5,8 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added sass styles for plonetheme.onegov.
+  [Julian Infanger]
 
 
 2.1.0 (2014-07-16)
