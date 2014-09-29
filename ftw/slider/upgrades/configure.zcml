@@ -42,4 +42,14 @@
         directory="profiles/1113"
         />
 
+    <!-- 1113 -> 1114 -->
+    <genericsetup:upgradeStep
+        title="Install content tree widget - if not already installed"
+        description=""
+        source="1113"
+        destination="1114"
+        handler="ftw.slider.upgrades.to1114.InstallContentTreeWidget"
+        profile="ftw.slider:default"
+        />
+
 </configure>
