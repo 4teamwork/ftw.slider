@@ -5,7 +5,8 @@ Changelog
 2.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Install plone.formwidget.contenttree - if not yet installed.
+  [mathias.leimgruber]
 
 
 2.1.1 (2014-08-15)
