@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.1.2 (unreleased)
+2.1.2 (2014-09-30)
 ------------------
 
 - Install plone.formwidget.contenttree - if not yet installed.
