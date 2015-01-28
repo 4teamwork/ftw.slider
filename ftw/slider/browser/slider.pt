@@ -15,9 +15,9 @@
                />
           <div class="sliderText"
                tal:condition="pane/text">
-            <h2 tal:condition="pane/title" tal:content="pane/title"
-                class="documentFirstHeading"/>
-            <span tal:content="structure pane/text/output" />
+            <p tal:condition="pane/title" tal:content="pane/title"
+                class="documentFirstHeading title"/>
+            <span tal:replace="structure pane/text/output" />
           </div>
         </a>
       </div>
