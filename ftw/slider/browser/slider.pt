@@ -13,18 +13,7 @@
           <a class="next">&nbsp;</a>
         </tal:slider_enabled>
 
-        <a tal:omit-tag="not:pane/link"
-           tal:attributes="href string:${portal/absolute_url}${pane/link}">
-          <div class="sliderImage"
-               tal:content="structure pane/@@images/image"
-               />
-          <div class="sliderText"
-               tal:condition="pane/text">
-            <h2 tal:condition="pane/title" tal:content="pane/title"
-                class="documentFirstHeading"/>
-            <span tal:content="structure pane/text/output" />
-          </div>
-        </a>
+        <span tal:replace="structure pane/render"></span>
       </div>
 
     </div>

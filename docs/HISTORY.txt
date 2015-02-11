@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.3.0 (unreleased)
+------------------
+
+- Embedded YouTube videos.
+  [mbaechtold]
+
 
 1.2.0 (2014-03-13)
 ------------------
