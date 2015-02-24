@@ -5,7 +5,8 @@ Changelog
 2.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix invalid html structure (replace h2 with p tag).
+  [kevin.bieri]
 
 
 2.1.3 (2014-10-23)
