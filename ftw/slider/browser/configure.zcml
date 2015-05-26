@@ -26,7 +26,7 @@
 
   <adapter
       for="Products.CMFCore.interfaces.IFolderish
-           Products.CMFDefault.interfaces.ICMFDefaultSkin
+           *
            plone.dexterity.interfaces.IDexterityFTI"
       provides="zope.publisher.interfaces.browser.IBrowserPage"
       factory=".slider.ContainerAddView"

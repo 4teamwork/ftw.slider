@@ -1,42 +1,33 @@
+from ftw.builder import Builder
+from ftw.builder import create
 from ftw.slider.testing import SLIDER_FUNCTIONAL_TESTING
-from ftw.testing.pages import Plone
-from ftw.testing import browser
-from unittest2 import TestCase
-from plone.app.testing import TEST_USER_ID
-from plone.app.testing import TEST_USER_NAME
-from plone.app.testing import login
+from ftw.testbrowser import browsing
+from ftw.testbrowser.pages import factoriesmenu
+from ftw.testbrowser.pages import plone
 from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
+from unittest2 import TestCase
+import transaction
+
 
 class TestSliderCreation(TestCase):
-
     layer = SLIDER_FUNCTIONAL_TESTING
 
     def setUp(self):
-        self.portal = self.layer['portal']
-
-        setRoles(self.portal, TEST_USER_ID, ['Contributor', 'Manager'])
-        login(self.portal, TEST_USER_NAME)
-
-        import transaction
+        setRoles(self.layer['portal'], TEST_USER_ID, ['Contributor', 'Manager'])
         transaction.commit()
 
-        Plone().login().visit_portal()
+    @browsing
+    def test_slider_container_is_addable(self, browser):
+        browser.login().open()
+        factoriesmenu.add('Slider Container')
+        browser.fill({'Title': 'Container 1'}).submit()
+        self.assertEquals('Container 1', plone.first_heading())
+        self.assertEquals('ftw-slider-container', plone.portal_type())
 
-    def test_slider_container_is_addable(self):
-        Plone().create_object('Slider Container', {'Title': 'Container1'})
-        self.assertIn('Item created',
-                      Plone().portal_text_messages()['info'])
-
-    # def test_slider_pane_is_addable(self):
-    #     Plone().create_object('Slider Container', {'Title': 'Container1'})
-    #     Plone().create_object('Slider Pane', {'Title': 'Pane1',
-    #                                           'image': 'xx'})
-
-    def test_redirect_if_there_is_already_a_container(self):
-        Plone().create_object('Slider Container', {'Title': 'Container1'})
-        Plone().visit_portal()
-        Plone().find_one_by_xpath(
-            '//a/span[normalize-space(text()) = "%s"]/..' % 'Slider Container').click()
-
-        self.assertEqual(self.portal.container1.absolute_url(),
-                         browser().url)
+    @browsing
+    def test_redirect_if_there_is_already_a_container(self, browser):
+        container = create(Builder('slider container').titled(u'Slider Container'))
+        browser.login().open()
+        factoriesmenu.add('Slider Container')
+        self.assertEquals(container.absolute_url(), browser.url)
