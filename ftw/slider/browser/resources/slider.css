@@ -46,7 +46,6 @@
 }
 
 .slick-prev, .slick-next {
-  display: none !important;
   line-height: 0;
   font-size: 0;
   cursor: pointer;
