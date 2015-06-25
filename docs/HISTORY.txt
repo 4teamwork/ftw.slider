@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Don't hide the slick arrows.
+  [mbaechtold]
+
 - Add Plone 4.3.5 support.
   [jone]
 
