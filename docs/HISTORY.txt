@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- No longer apply IDexterityTranslatable behavior automatically.
+  [mathias.leimgruber]
+
 - Don't hide the slick arrows.
   [mbaechtold]
 
