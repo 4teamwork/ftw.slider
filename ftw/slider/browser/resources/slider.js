@@ -1,4 +1,4 @@
-(function() {
+(function(global) {
 
   "use strict";
 
@@ -9,7 +9,7 @@
       canPause: false
     }, config);
 
-    var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}">{{:action}}</button>'
+    var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}">{{:action}}</button>';
 
     var init = function() {
       $(element).slick(config);
@@ -29,21 +29,25 @@
       var button = $(buttonTemplate.replace(/{{:action}}/g, "play"));
       button.on("click", play);
       element.append(button);
-    }
+    };
 
     var addPauseButton = function() {
       var button = $(buttonTemplate.replace(/{{:action}}/g, "pause"));
       button.on("click", pause);
       element.append(button);
-    }
+    };
 
     init();
-  }
+  };
 
   $(function() {
-    $(".sliderWrapper").each(function() {
-      var slider = new Slider($(".sliderPanes", this), JSON.parse(this.dataset.settings));
-    });
+    var ftwSliderInit = function(){
+      $(".sliderWrapper").each(function() {
+        var slider = new Slider($(".sliderPanes", this), JSON.parse(this.dataset.settings));
+      });
+    };
+    ftwSliderInit();
+    global.ftwSliderInit = ftwSliderInit;
   });
 
-})();
+})(window);
