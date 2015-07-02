@@ -12,6 +12,15 @@
     var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}">{{:action}}</button>';
 
     var init = function() {
+
+      if (config.slidesToShow === undefined){
+        config.slidesToShow = 1;
+      }
+
+      if (config.slidesToShow === 1){
+        $(element).addClass("OnlyPane");
+      }
+
       $(element).slick(config);
       if(config.canPlay) {
         addPlayButton();
