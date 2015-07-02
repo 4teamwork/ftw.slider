@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-10 13:58+0000\n"
+"POT-Creation-Date: 2015-07-02 07:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,10 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: ftw.slider\n"
 
 #: ./ftw/slider/profiles/default/types/ftw.slider.Container.xml
 msgid "Slider Container"
@@ -25,40 +22,51 @@ msgstr ""
 msgid "Slider Pane"
 msgstr ""
 
-#: ./ftw/slider/browser/slider.py:27
+#: ./ftw/slider/browser/slider.py:45
 msgid "There is already a slider pane in this context"
 msgstr ""
 
-#: ./ftw/slider/contents/pane.py:27
+#. Default: "It's not possible to add a link and an external url at the same time"
+#: ./ftw/slider/contents/pane.py:44
+msgid "error_message_links"
+msgstr ""
+
+#: ./ftw/slider/contents/pane.py:29
 msgid "help_link"
 msgstr ""
 
-#. Default: "Be careful changing. This is the configuration for the diashow javascript. Available options: <a href=\"https://github.com/kenwheeler/slick/#options\">github.com/kenwheeler/slick/#options</a> <br />If all goes wrong, use the default: {autoplay: true, autoplaySpeed: 3000}"
-#: ./ftw/slider/extender.py:26
+#. Default: "Be careful changing. This is the configuration for the diashow javascript. Available options: <a href=\"https://github.com/kenwheeler/slick/#options\">github.com/kenwheeler/slick/#options</a> <br />If all goes wrong, use the default: {\"autoplay\": true, \"autoplaySpeed\": 3000}"
+#: ./ftw/slider/extender.py:50
 msgid "help_slicksettings"
 msgstr ""
 
-#: ./ftw/slider/contents/pane.py:17
+#: ./ftw/slider/contents/pane.py:19
 msgid "help_text"
 msgstr ""
 
+#. Default: "External URL"
+#: ./ftw/slider/contents/pane.py:34
+msgid "label_external_url"
+msgstr ""
+
 #. Default: "Image"
-#: ./ftw/slider/contents/pane.py:21
+#: ./ftw/slider/contents/pane.py:23
 msgid "label_image"
 msgstr ""
 
 #. Default: "Link"
-#: ./ftw/slider/contents/pane.py:26
+#: ./ftw/slider/contents/pane.py:28
 msgid "label_link"
 msgstr ""
 
 #. Default: "Settings for diashow"
-#: ./ftw/slider/extender.py:25
+#: ./ftw/slider/extender.py:48
 msgid "label_slicksettings"
 msgstr ""
 
 #. Default: "Text"
-#: ./ftw/slider/contents/pane.py:16
+#: ./ftw/slider/contents/pane.py:18
 msgid "label_text"
 msgstr ""
+
 

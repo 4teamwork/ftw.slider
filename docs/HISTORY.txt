@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Link the slider pane to an external url.
+  [mbaechtold]
+  
 - Implement play and pause button.
   [Kevin Bieri]
 
