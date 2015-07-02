@@ -17,11 +17,16 @@
         config.slidesToShow = 1;
       }
 
+      var toSlick = $(element);
       if (config.slidesToShow === 1){
-        $(element).addClass("OnlyPane");
+        toSlick.addClass("OnlyPane");
       }
 
-      $(element).slick(config);
+      if (toSlick.hasClass("slick-initialized")){
+        toSlick.slick('destroy');
+      }
+
+      toSlick.slick(config);
       if(config.canPlay) {
         addPlayButton();
       }
