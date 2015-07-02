@@ -5,6 +5,15 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Implement play and pause button.
+  [Kevin Bieri]
+
+- Use DOM exposed configuration for slider initialisation.
+  [Kevin Bieri]
+
+- Extend configuration for play and pause functionality.
+  [Kevin Bieri]
+
 - Don't hide the slick arrows.
   [mbaechtold]
 
