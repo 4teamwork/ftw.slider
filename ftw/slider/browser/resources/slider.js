@@ -57,7 +57,7 @@
   $(function() {
     var ftwSliderInit = function(){
       $(".sliderWrapper").each(function() {
-        var slider = new Slider($(".sliderPanes", this), JSON.parse(this.dataset.settings));
+        var slider = new Slider($(".sliderPanes", this), $(this).data("settings"));
       });
     };
     ftwSliderInit();

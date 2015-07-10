@@ -5,9 +5,12 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Fix initialisation error for slider in IE10
+  [Kevin Bieri]
+
 - Link the slider pane to an external url.
   [mbaechtold]
-  
+
 - Implement play and pause button.
   [Kevin Bieri]
 
