@@ -60,8 +60,16 @@
         var slider = new Slider($(".sliderPanes", this), $(this).data("settings"));
       });
     };
+    var ftwSliderUpdate = function() {
+      $(".sliderWrapper").each(function() {
+        if($("> div.slick-initialized", this).length < 1) {
+          var slider = new Slider($(".sliderPanes", this), $(this).data("settings"));
+        }
+      });
+    };
     ftwSliderInit();
     global.ftwSliderInit = ftwSliderInit;
+    global.ftwSliderUpdate = ftwSliderUpdate;
   });
 
 })(window);
