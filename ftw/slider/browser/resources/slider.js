@@ -2,7 +2,7 @@
 
   "use strict";
 
-  var Slider =  function(element, config) {
+  var Slider = function(element, config) {
 
     config = $.extend({
       canPlay: false,
@@ -10,30 +10,6 @@
     }, config);
 
     var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}">{{:action}}</button>';
-
-    var init = function() {
-
-      if (config.slidesToShow === undefined){
-        config.slidesToShow = 1;
-      }
-
-      var toSlick = $(element);
-      if (config.slidesToShow === 1){
-        toSlick.addClass("OnlyPane");
-      }
-
-      if (toSlick.hasClass("slick-initialized")){
-        toSlick.slick('destroy');
-      }
-
-      toSlick.slick(config);
-      if(config.canPlay) {
-        addPlayButton();
-      }
-      if(config.canPause) {
-        addPauseButton();
-      }
-    };
 
     var play = function() { element.slick("slickPlay"); };
 
@@ -49,6 +25,30 @@
       var button = $(buttonTemplate.replace(/{{:action}}/g, "pause"));
       button.on("click", pause);
       element.append(button);
+    };
+
+    var init = function() {
+
+      if (!config.slidesToShow){
+        config.slidesToShow = 1;
+      }
+
+      var toSlick = $(element);
+      if (config.slidesToShow === 1){
+        toSlick.addClass("OnlyPane");
+      }
+
+      if (toSlick.hasClass("slick-initialized")){
+        toSlick.slick("destroy");
+      }
+
+      toSlick.slick(config);
+      if(config.canPlay) {
+        addPlayButton();
+      }
+      if(config.canPause) {
+        addPauseButton();
+      }
     };
 
     init();
