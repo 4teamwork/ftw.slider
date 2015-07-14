@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Implement update function.
+  [Kevin Bieri]
+
 - Fix initialisation error for slider in IE10
   [Kevin Bieri]
 
