@@ -1,0 +1,93 @@
+$slider-button-size: 20px;
+$slider-button-gutter: 10px;
+$slider-text-bg-color: #fff !default;
+$slider-text-transparency: .6 !default;
+$slider-text-title-font-size: 20px !default;
+$slider-text-title-font-color: $text-color !default;
+$slider-text-font-size: 16px !default;
+$slider-text-font-color: $text-color !default;
+$slider-button-bg-color: $gray-dark !default;
+$slider-button-text-color: $gray-lighter !default;
+
+@include declare_variables(
+  slider-button-size,
+  slider-button-gutter,
+  slider-text-bg-color,
+  slider-text-transparency,
+  slider-text-title-font-size,
+  slider-text-title-font-color,
+  slider-text-font-size,
+  slider-text-font-color,
+  slider-button-bg-color,
+  slider-button-text-color);
+
+.sliderPanes {
+  &.OnlyPane .sliderPane {
+    margin:0;
+  }
+  .sliderPane {
+    position: relative;
+    margin:0 5px 0 5px;
+    .sliderText {
+      max-width: 400px;
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      background-color: $slider-text-bg-color;
+      opacity: $slider-text-transparency;
+      padding: 15px 10px;
+      > p {
+        font-size: $slider-text-font-size;
+        color: $slider-text-font-color;
+        &.documentFirstHeading {
+          margin: 0;
+          font-size: $slider-text-title-font-size;
+          color: $slider-text-title-font-color;
+        }
+      }
+    }
+    .sliderImage {
+      img {
+        height: auto;
+      }
+    }
+    > a .sliderText .documentFirstHeading {
+      color: $link-color;
+    }
+  }
+  > button {
+    background-color: $slider-button-bg-color;
+    color: $slider-button-text-color;
+    width: $slider-button-size;
+    height: $slider-button-size;
+    position: absolute;
+    top: 10px;
+    line-height: 0;
+    font-size: 0;
+    display: block;
+    cursor: pointer;
+    border: none;
+    float: left;
+    @extend .fa-icon;
+    &:before {
+      font-size: 10px;
+      line-height: $slider-button-size;
+    }
+    &.slick-play {
+      @extend .fa-play;
+      left: $slider-button-gutter * 2 + $slider-button-size;
+    }
+    &.slick-pause {
+      @extend .fa-pause;
+      left: $slider-button-gutter;
+    }
+    &.slick-next {
+      @extend .fa-angle-double-right;
+      left: $slider-button-gutter * 2 + $slider-button-size;
+    }
+    &.slick-prev {
+      @extend .fa-angle-double-left;
+      left: $slider-button-gutter;
+    }
+  }
+}

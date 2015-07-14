@@ -52,4 +52,14 @@
         profile="ftw.slider:default"
         />
 
+    <!-- 1114 -> 1115 -->
+    <upgrade-step:importProfile
+        title="Disable standard CSS with ftw.theming in favor of sass file."
+        profile="ftw.slider:default"
+        description=""
+        source="1114"
+        destination="1115"
+        directory="profiles/1115"
+        />
+
 </configure>
