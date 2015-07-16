@@ -30,6 +30,7 @@
     <element value="plone.app.dexterity.behaviors.metadata.IBasic" />
     <element value="plone.app.content.interfaces.INameFromTitle" />
     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
+    <element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/>
     <element zcml:condition="installed plone.multilingualbehavior"
              value="plone.multilingualbehavior.interfaces.IDexterityTranslatable" />
   </property>
