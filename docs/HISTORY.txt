@@ -5,7 +5,7 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
-- Implement update function.
+- Refactor SCSS registration.
   [Kevin Bieri]
 
 - Fix initialisation error for slider in IE10
