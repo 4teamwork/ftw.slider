@@ -6,7 +6,7 @@
 
     <configure zcml:condition="installed plonetheme.onegov">
         <include package="plonetheme.onegov" />
-        <onegovtheme:add_scss path="onegovtheme.sass" />
+        <onegovtheme:add_scss path="browser/resources/onegovtheme.sass" />
     </configure>
 
     <configure zcml:condition="installed ftw.theming">
