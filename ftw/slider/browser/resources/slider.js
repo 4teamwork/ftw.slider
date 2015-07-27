@@ -1,12 +1,15 @@
-(function(global) {
+(function(global, $) {
 
   "use strict";
 
   var Slider = function(element, config) {
 
+    element = $(element);
+
     config = $.extend({
       canPlay: false,
-      canPause: false
+      canPause: false,
+      slidesToShow: 1
     }, config);
 
     var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}">{{:action}}</button>';
@@ -15,61 +18,54 @@
 
     var pause = function() { element.slick("slickPause"); };
 
-    var addPlayButton = function() {
-      var button = $(buttonTemplate.replace(/{{:action}}/g, "play"));
-      button.on("click", play);
-      element.append(button);
+    var buildButton = function(name, handler) {
+      var button = $(buttonTemplate.replace(/{{:action}}/g, name));
+      return button.on("click", handler);
     };
 
-    var addPauseButton = function() {
-      var button = $(buttonTemplate.replace(/{{:action}}/g, "pause"));
-      button.on("click", pause);
-      element.append(button);
-    };
+    var addPlayButton = function() { element.append(buildButton("play", play)); };
+
+    var addPauseButton = function() { element.append(buildButton("pause", pause)); };
 
     var init = function() {
 
-      if (!config.slidesToShow){
-        config.slidesToShow = 1;
-      }
-
-      var toSlick = $(element);
       if (config.slidesToShow === 1){
-        toSlick.addClass("OnlyPane");
+        element.addClass("OnlyPane");
       }
 
-      if (toSlick.hasClass("slick-initialized")){
-        toSlick.slick("destroy");
+      if (element.hasClass("slick-initialized")){
+        element.slick("destroy");
       }
 
-      toSlick.slick(config);
+      element.slick(config);
+
       if(config.canPlay) {
         addPlayButton();
       }
+
       if(config.canPause) {
         addPauseButton();
       }
     };
 
+    var update = function(updatedElement, updatedConfig) {
+      if(updatedElement) {
+        element = updatedElement;
+      }
+      if(config) {
+        $.extend(config, updatedConfig);
+      }
+      init();
+    };
+
     init();
+
+    return {
+      update: update
+    };
+
   };
 
-  $(function() {
-    var ftwSliderInit = function(){
-      $(".sliderWrapper").each(function() {
-        var slider = new Slider($(".sliderPanes", this), $(this).data("settings"));
-      });
-    };
-    var ftwSliderUpdate = function() {
-      $(".sliderWrapper").each(function() {
-        if($("> div.slick-initialized", this).length < 1) {
-          var slider = new Slider($(".sliderPanes", this), $(this).data("settings"));
-        }
-      });
-    };
-    ftwSliderInit();
-    global.ftwSliderInit = ftwSliderInit;
-    global.ftwSliderUpdate = ftwSliderUpdate;
-  });
+  global.Slider = Slider;
 
-})(window);
+})(window, jQuery);
