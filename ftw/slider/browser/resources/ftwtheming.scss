@@ -26,22 +26,28 @@ $slider-button-text-color: $gray-lighter !default;
 
 .sliderPanes {
   &.OnlyPane .sliderPane {
-    margin:0;
+    margin: 0;
   }
+
   .sliderPane {
     position: relative;
-    margin:0 5px 0 5px;
+    margin: 0 5px 0 5px;
+
     .sliderText {
       max-width: 400px;
+      width: 100%;
       position: absolute;
       bottom: 20px;
       right: 0;
+      box-sizing: border-box;
       background-color: $slider-text-bg-color;
       opacity: $slider-text-transparency;
       padding: 15px 10px;
+
       > p {
         font-size: $slider-text-font-size;
         color: $slider-text-font-color;
+
         &.documentFirstHeading {
           margin: 0;
           font-size: $slider-text-title-font-size;
@@ -49,45 +55,47 @@ $slider-button-text-color: $gray-lighter !default;
         }
       }
     }
+
     .sliderImage {
       img {
         height: auto;
       }
     }
+
     > a .sliderText .documentFirstHeading {
       color: $link-color;
     }
   }
+
   > button {
+    @extend .fa-icon;
     background-color: $slider-button-bg-color;
-    color: $slider-button-text-color;
-    width: $slider-button-size;
-    height: $slider-button-size;
-    position: absolute;
-    top: 10px;
-    line-height: 0;
-    font-size: 0;
-    display: block;
-    cursor: pointer;
     border: none;
+    color: $slider-button-text-color;
+    cursor: pointer;
+    display: block;
     float: left;
     @extend .fa-icon;
     &:before {
-      font-size: 10px;
+      font-size: $slider-button-size / 2;
       line-height: $slider-button-size;
     }
+
     &.slick-play {
       @extend .fa-play;
       left: $slider-button-gutter * 2 + $slider-button-size;
     }
+
     &.slick-pause {
       @extend .fa-pause;
       left: $slider-button-gutter;
     }
+
     &.slick-next {
       @extend .fa-angle-double-right;
       left: $slider-button-gutter * 2 + $slider-button-size;
     }
+
     &.slick-prev {
       @extend .fa-angle-double-left;
       left: $slider-button-gutter;
