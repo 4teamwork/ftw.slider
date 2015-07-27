@@ -1,8 +1,9 @@
 @include portal-type-font-awesome-icon(ftw-slider-container, caret-square-o-right);
+
 @include portal-type-font-awesome-icon(ftw-slider-pane, caret-square-o-right);
 
-$slider-button-size: 20px;
-$slider-button-gutter: 10px;
+$slider-button-size: 40px !default;
+$slider-button-gutter: 10px !default;
 $slider-text-bg-color: #fff !default;
 $slider-text-transparency: .6 !default;
 $slider-text-title-font-size: 20px !default;
@@ -75,7 +76,13 @@ $slider-button-text-color: $gray-lighter !default;
     cursor: pointer;
     display: block;
     float: left;
-    @extend .fa-icon;
+    font-size: 0;
+    height: $slider-button-size;
+    line-height: 0;
+    position: absolute;
+    top: $slider-button-gutter;
+    width: $slider-button-size;
+
     &:before {
       font-size: $slider-button-size / 2;
       line-height: $slider-button-size;
@@ -83,22 +90,33 @@ $slider-button-text-color: $gray-lighter !default;
 
     &.slick-play {
       @extend .fa-play;
-      left: $slider-button-gutter * 2 + $slider-button-size;
+      position: static;
+      margin-right: $slider-button-gutter;
     }
 
     &.slick-pause {
       @extend .fa-pause;
-      left: $slider-button-gutter;
+      position: static;
     }
 
     &.slick-next {
-      @extend .fa-angle-double-right;
-      left: $slider-button-gutter * 2 + $slider-button-size;
+      @extend .fa-chevron-right;
+      background-color: rgba(255, 255, 255, .8);
+      color: $primary-color;
+      left: auto;
+      margin-top: -$slider-button-size;
+      right: 0;
+      top: 50%;
     }
 
     &.slick-prev {
-      @extend .fa-angle-double-left;
-      left: $slider-button-gutter;
+      @extend .fa-chevron-left;
+      background-color: rgba(255, 255, 255, .8);
+      color: $primary-color;
+      left: 0;
+      margin-top: -$slider-button-size;
+      right: auto;
+      top: 50%;
     }
   }
 }
