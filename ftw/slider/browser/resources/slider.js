@@ -48,13 +48,20 @@
       }
     };
 
+    var update = function(updatedElement, updatedConfig) {
+      if(updatedElement) {
+        element = updatedElement;
+      }
+      if(config) {
+        $.extend(config, updatedConfig);
+      }
+      init();
+    };
+
     init();
 
-  $(function() {
-    var ftwSliderInit = function(){
-      $(".sliderWrapper").each(function() {
-        var slider = new Slider($(".sliderPanes", this), $(this).data("settings"));
-      });
+    return {
+      update: update
     };
 
   };
