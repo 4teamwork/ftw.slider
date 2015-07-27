@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Mark image field as primary field.
+  [jone]
+
 - Fix plonetheme.onegov integration.
   [mbaechtold]
 
