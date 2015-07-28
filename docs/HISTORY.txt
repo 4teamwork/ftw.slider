@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Use UID-based scaling urls in order to have caching.
+  [jone]
+
 - Mark image field as primary field.
   [jone]
 
