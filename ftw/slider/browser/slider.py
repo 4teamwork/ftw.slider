@@ -1,8 +1,9 @@
 from ftw.slider import _
 from plone.dexterity.browser.add import DefaultAddForm, DefaultAddView
-from zope.publisher.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.statusmessages.interfaces import IStatusMessage
+from zope.publisher.browser import BrowserView
+import json
 
 
 class SliderView(BrowserView):
@@ -14,6 +15,14 @@ class SliderView(BrowserView):
 
     def panes(self):
         return self.context.getFolderContents(full_objects=True)
+
+    def get_slick_config(self):
+        # The config value may contain unwanted new lines. Let's remove them
+        # by loading and dumping as json.
+        if not self.context.slick_config:
+            return '{}'
+        config = json.loads(self.context.slick_config)
+        return json.dumps(config)
 
 
 class ContainerAddForm(DefaultAddForm):

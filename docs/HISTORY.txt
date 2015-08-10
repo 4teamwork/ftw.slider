@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Add slick_config field to container schema
+  [elioschmutz]
+
 - Add css class if pane has text
   [elioschmutz]
 
