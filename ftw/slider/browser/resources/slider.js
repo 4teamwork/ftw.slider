@@ -68,4 +68,6 @@
 
   global.Slider = Slider;
 
+  $(function() { var defaultSlider = new Slider("#slider-panes"); });
+
 })(window, jQuery);

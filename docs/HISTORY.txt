@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Initialize sliderpanes on pageload
+  [elioschmutz]
+
 - Use UID-based scaling urls in order to have caching.
   [jone]
 
