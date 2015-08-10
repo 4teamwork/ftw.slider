@@ -6,7 +6,7 @@
        tal:condition="panes">
     <div id="slider-panes">
       <div tal:repeat="pane panes"
-           class="sliderPane">
+           tal:attributes="class python:pane.text and 'sliderPane sliderPaneHasText' or 'sliderPane'">
 
         <tal:pane tal:define="internal_link string:${portal/absolute_url}${pane/link};
                               link python: internal_link and pane.link or pane.external_url;">

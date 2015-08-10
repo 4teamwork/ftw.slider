@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Add css class if pane has text
+  [elioschmutz]
+
 - Initialize sliderpanes on pageload
   [elioschmutz]
 
