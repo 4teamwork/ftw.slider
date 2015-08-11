@@ -68,4 +68,9 @@
 
   global.Slider = Slider;
 
+  $(function() {
+    var $slider = $("#slider-panes");
+    var defaultSlider = new Slider($slider, $slider.data("settings"));
+  });
+
 })(window, jQuery);
