@@ -27,42 +27,72 @@
 
     var addPauseButton = function() { element.append(buildButton("pause", pause)); };
 
+    var destroy = function() {
+      element.slick("destroy");
+      element.children("button").remove();
+    };
+
+    var checkResponsive = function() {
+      var width = $(window).width();
+      var responsiveOption = false;
+      if(config.responsive) {
+        $.each(config.responsive, function(idx, option) {
+          if (config.mobileFirst === false) {
+            if (width < option.breakpoint) {
+              responsiveOption = option.settings;
+            }
+          } else {
+            if (width > option.breakpoint) {
+              responsiveOption = option.settings;
+            }
+          }
+        });
+      }
+      return responsiveOption;
+    };
+
     var init = function() {
 
-      if (config.slidesToShow === 1){
+      if (config.slidesToShow === 1) {
         element.addClass("OnlyPane");
       }
 
-      if (element.hasClass("slick-initialized")){
-        element.slick("destroy");
+      if (element.hasClass("slick-initialized")) {
+        destroy();
+      }
+
+      var responsiveConfig = checkResponsive();
+
+      if(responsiveConfig) {
+        $.extend(config, responsiveConfig);
       }
 
       element.slick(config);
 
-      if(config.canPlay) {
+      if (config.canPlay) {
         addPlayButton();
       }
 
-      if(config.canPause) {
+      if (config.canPause) {
         addPauseButton();
       }
+
+      element.on("breakpoint", function(event, slick, breakpoint) { update(null, slick.breakpointSettings[breakpoint]); });
     };
 
     var update = function(updatedElement, updatedConfig) {
-      if(updatedElement) {
+      if (updatedElement) {
         element = updatedElement;
       }
-      if(config) {
-        $.extend(config, updatedConfig);
+      if (updatedConfig) {
+        config = $.extend(config, updatedConfig);
       }
       init();
     };
 
     init();
 
-    return {
-      update: update
-    };
+    return { update: update };
 
   };
 
