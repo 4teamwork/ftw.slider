@@ -33,6 +33,19 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
     margin: 0;
   }
 
+  &.arrowsOnHover {
+    > button {
+      &.slick-next, &.slick-prev {
+        display: none;
+      }
+    }
+    &:hover {
+      > button {
+        display: block;
+      }
+    }
+  }
+
   .sliderPane {
     position: relative;
     margin: 0 5px 0 5px;
@@ -114,7 +127,7 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
       left: auto;
       background-color: $slider-button-next-prev-bg-color;
       color: $slider-button-next-prev-text-color;
-      margin-top: -$slider-next-prev-button-size;
+      margin-top: -$slider-next-prev-button-size / 2;
       width: $slider-next-prev-button-size;
       height: $slider-next-prev-button-size;
       right: 0;
@@ -130,7 +143,7 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
       background-color: $slider-button-next-prev-bg-color;
       color: $slider-button-next-prev-text-color;
       left: 0;
-      margin-top: -$slider-next-prev-button-size;
+      margin-top: -$slider-next-prev-button-size / 2;
       width: $slider-next-prev-button-size;
       height: $slider-next-prev-button-size;
       right: auto;
