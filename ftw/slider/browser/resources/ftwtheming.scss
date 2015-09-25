@@ -98,15 +98,17 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
 
     &.slick-play {
       @extend .fa-play;
-      position: static;
       background-color: $slider-button-start-pause-bg-color;
       color: $slider-button-start-pause-text-color;
-      margin-right: $slider-button-gutter;
       width: $slider-play-pause-button-size;
       height: $slider-play-pause-button-size;
+      top: $slider-button-gutter;
+      right: $slider-button-gutter * 2 + $slider-play-pause-button-size;
+      border: 1px solid #fff;
       &:before {
         font-size: $slider-play-pause-button-size / 2;
-        line-height: $slider-play-pause-button-size;
+        line-height: $slider-play-pause-button-size - 2;
+        margin-right: 0;
       }
     }
 
@@ -114,12 +116,15 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
       @extend .fa-pause;
       background-color: $slider-button-start-pause-bg-color;
       color: $slider-button-start-pause-text-color;
-      position: static;
       width: $slider-play-pause-button-size;
       height: $slider-play-pause-button-size;
+      top: $slider-button-gutter;
+      right: $slider-button-gutter;
+      border: 1px solid #fff;
       &:before {
         font-size: $slider-play-pause-button-size / 2;
-        line-height: $slider-play-pause-button-size;
+        line-height: $slider-play-pause-button-size - 2;
+        margin-right: 0;
       }
     }
 
@@ -136,6 +141,7 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
       &:before {
         font-size: $slider-next-prev-button-size / 2;
         line-height: $slider-next-prev-button-size;
+        margin-right: 0;
       }
     }
 
@@ -152,6 +158,7 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
       &:before {
         font-size: $slider-next-prev-button-size / 2;
         line-height: $slider-next-prev-button-size;
+        margin-right: 0;
       }
     }
   }
