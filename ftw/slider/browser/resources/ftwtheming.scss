@@ -54,7 +54,7 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
       max-width: 400px;
       width: 100%;
       position: absolute;
-      bottom: 20px;
+      bottom: 0;
       right: 0;
       box-sizing: border-box;
       background-color: $slider-text-bg-color;
@@ -75,6 +75,7 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
 
     .sliderImage {
       img {
+        margin: 0;
         height: auto;
       }
     }
