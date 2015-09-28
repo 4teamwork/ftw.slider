@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-07-02 07:57+0000\n"
+"POT-Creation-Date: 2015-09-28 07:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,16 +19,16 @@ msgstr "Slider Ordner"
 msgid "Slider Pane"
 msgstr "Slider Bild"
 
-#: ./ftw/slider/browser/slider.py:45
+#: ./ftw/slider/browser/slider.py:51
 msgid "There is already a slider pane in this context"
 msgstr "Es kann jeweils nur ein Slider Ordner erstellt werden"
 
 #. Default: "It's not possible to add a link and an external url at the same time"
-#: ./ftw/slider/contents/pane.py:44
+#: ./ftw/slider/contents/pane.py:50
 msgid "error_message_links"
 msgstr "Es ist nicht möglich, gleichzeitig einen Link und eine externe URL anzugeben."
 
-#: ./ftw/slider/contents/pane.py:29
+#: ./ftw/slider/contents/pane.py:34
 msgid "help_link"
 msgstr ""
 
@@ -37,22 +37,22 @@ msgstr ""
 msgid "help_slicksettings"
 msgstr "Ändern mit Vorsicht! Hier können Optionen für das JavaScript der Diashow definiert werden. Mögliche Optionen: <a href=\"https://github.com/kenwheeler/slick/#options\">github.com/kenwheeler/slick/#options</a> <br />Läuft alles Schief, Standard verwenden: {\"autoplay\": true, \"autoplaySpeed\": 3000}"
 
-#: ./ftw/slider/contents/pane.py:19
+#: ./ftw/slider/contents/pane.py:21
 msgid "help_text"
 msgstr ""
 
 #. Default: "External URL"
-#: ./ftw/slider/contents/pane.py:34
+#: ./ftw/slider/contents/pane.py:40
 msgid "label_external_url"
 msgstr "Externe URL"
 
 #. Default: "Image"
-#: ./ftw/slider/contents/pane.py:23
+#: ./ftw/slider/contents/pane.py:27
 msgid "label_image"
 msgstr "Bild"
 
 #. Default: "Link"
-#: ./ftw/slider/contents/pane.py:28
+#: ./ftw/slider/contents/pane.py:33
 msgid "label_link"
 msgstr "Link"
 
@@ -61,9 +61,39 @@ msgstr "Link"
 msgid "label_slicksettings"
 msgstr "Einstellungen für Diashow"
 
+#. Default: "Next"
+#: ./ftw/slider/browser/slider.py:26
+msgid "label_slider_next"
+msgstr "Nächstes"
+
+#. Default: "Pause"
+#: ./ftw/slider/browser/slider.py:24
+msgid "label_slider_pause"
+msgstr "Pause"
+
+#. Default: "Play"
+#: ./ftw/slider/browser/slider.py:22
+msgid "label_slider_play"
+msgstr "Abspielen"
+
+#. Default: "Previous"
+#: ./ftw/slider/browser/slider.py:28
+msgid "label_slider_prev"
+msgstr "Vorheriges"
+
 #. Default: "Text"
-#: ./ftw/slider/contents/pane.py:18
+#: ./ftw/slider/contents/pane.py:20
 msgid "label_text"
 msgstr "Text"
+
+#. Default: "See http://kenwheeler.github.io/slick/"
+#: ./ftw/slider/contents/container.py:22
+msgid "slick_config_description"
+msgstr ""
+
+#. Default: "Configuration"
+#: ./ftw/slider/contents/container.py:21
+msgid "slick_config_label"
+msgstr ""
 
 

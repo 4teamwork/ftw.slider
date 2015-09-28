@@ -9,23 +9,34 @@
     config = $.extend({
       canPlay: false,
       canPause: false,
-      slidesToShow: 1
+      slidesToShow: 1,
+      labels: {}
     }, config);
 
-    var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}">{{:action}}</button>';
+    var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}"></button>';
 
     var play = function() { element.slick("slickPlay"); };
 
     var pause = function() { element.slick("slickPause"); };
 
-    var buildButton = function(name, handler) {
-      var button = $(buttonTemplate.replace(/{{:action}}/g, name));
-      return button.on("click", handler);
+    var buildButton = function(name, label, handler) {
+      var button = $(buttonTemplate.replace(/{{:action}}/g, name)).text(label);
+      if(handler) {
+        button.on("click", handler);
+      }
+      return button;
     };
 
-    var addPlayButton = function() { element.append(buildButton("play", play)); };
+    var addPlayButton = function() { element.append(buildButton("play", config.labels.play, play)); };
 
-    var addPauseButton = function() { element.append(buildButton("pause", pause)); };
+    var addPauseButton = function() { element.append(buildButton("pause", config.labels.pause, pause)); };
+
+    var prevButton = buildButton("prev", config.labels.prev);
+
+    var nextButton = buildButton("next", config.labels.next);
+
+    config.prevArrow = prevButton.prop("outerHTML");
+    config.nextArrow = nextButton.prop("outerHTML");
 
     var destroy = function() {
       element.slick("destroy");
@@ -78,6 +89,7 @@
       }
 
       element.on("breakpoint", function(event, slick, breakpoint) { update(null, slick.breakpointSettings[breakpoint]); });
+
     };
 
     var update = function(updatedElement, updatedConfig) {

@@ -5,6 +5,9 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Add translations for play, pause, next and previous buttons.
+  [Kevin Bieri, jone]
+
 - Add slick_config field to container schema
   [elioschmutz]
 
