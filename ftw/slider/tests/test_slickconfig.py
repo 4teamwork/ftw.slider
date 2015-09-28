@@ -27,6 +27,11 @@ class TestSliderConfig(TestCase):
 
     @browsing
     def test_slider_adds_slick_config_if_available(self, browser):
+        self.portal.portal_languages.manage_setLanguageSettings(
+            'de',
+            ['de'],
+            setUseCombinedLanguageCodes=False)
+
         container = create(Builder('slider container')
                            .within(self.folder)
                            .having(slick_config=json.dumps({'is_chuck': True}))
@@ -40,8 +45,12 @@ class TestSliderConfig(TestCase):
         browser.login().visit(self.folder)
 
         self.assertEqual(
-            '{"is_chuck": true}',
-            browser.css('#slider-panes').first.get('data-settings'))
+            {u'labels': {u'pause': u'Pause',
+                         u'play': u'Abspielen',
+                         u'prev': u'Vorheriges',
+                         u'next': u'N\xe4chstes'},
+             u'is_chuck': True},
+            json.loads(browser.css('#slider-panes').first.get('data-settings')))
 
 
 class TestSliderConfigValidator(TestCase):
