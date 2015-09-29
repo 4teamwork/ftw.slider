@@ -10,7 +10,11 @@
       canPlay: false,
       canPause: false,
       slidesToShow: 1,
-      labels: {}
+      labels: {},
+      arrowsOnHover: true,
+      arrows: false,
+      canNext: true,
+      canPrev: true
     }, config);
 
     var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}"></button>';
@@ -18,6 +22,10 @@
     var play = function() { element.slick("slickPlay"); };
 
     var pause = function() { element.slick("slickPause"); };
+
+    var next = function() { element.slick("slickNext"); };
+
+    var prev = function() { element.slick("slickPrev"); };
 
     var buildButton = function(name, label, handler) {
       var button = $(buttonTemplate.replace(/{{:action}}/g, name)).text(label);
@@ -31,12 +39,9 @@
 
     var addPauseButton = function() { element.append(buildButton("pause", config.labels.pause, pause)); };
 
-    var prevButton = buildButton("prev", config.labels.prev);
+    var addNextButton = function() { element.append(buildButton("next", config.labels.next, next)); };
 
-    var nextButton = buildButton("next", config.labels.next);
-
-    config.prevArrow = prevButton.prop("outerHTML");
-    config.nextArrow = nextButton.prop("outerHTML");
+    var addPrevButton = function() { element.append(buildButton("prev", config.labels.prev, prev)); };
 
     var destroy = function() {
       element.slick("destroy");
@@ -88,8 +93,19 @@
         addPauseButton();
       }
 
+      if(config.canNext) {
+        addNextButton();
+      }
+
+      if(config.canPrev) {
+        addPrevButton();
+      }
+
       element.on("breakpoint", function(event, slick, breakpoint) { update(null, slick.breakpointSettings[breakpoint]); });
 
+      if(config.arrowsOnHover) {
+        element.addClass("arrowsOnHover");
+      }
     };
 
     var update = function(updatedElement, updatedConfig) {
