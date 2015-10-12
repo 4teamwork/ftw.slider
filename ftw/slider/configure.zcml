@@ -2,11 +2,13 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="ftw.slider">
 
   <include file="permissions.zcml" />
   <include zcml:condition="installed ftw.lawgiver" file="lawgiver.zcml" />
+  <include package="ftw.upgrade" file="meta.zcml" />
 
   <include package=".browser" />
   <include package=".viewlets" />
@@ -30,5 +32,9 @@
              name="ftw.slider.slicksettings.extender" />
   </configure>
 
+  <upgrade-step:directory
+      profile="ftw.slider:default"
+      directory="./upgrades"
+      />
 
 </configure>
