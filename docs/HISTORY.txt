@@ -5,7 +5,8 @@ Changelog
 2.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add IPublication behavior for ftw.slider.Pane
+  [elioschmutz]
 
 
 2.3.0 (2015-09-30)
