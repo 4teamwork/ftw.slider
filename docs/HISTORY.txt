@@ -5,7 +5,12 @@ Changelog
 2.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update sliderpane for accessiblity
+
+  - Show always empty image alt and title attributes on a pane
+  - Remove unused descriptionfield on a pane
+
+  [elioschmutz]
 
 
 2.3.0 (2015-09-30)
@@ -130,8 +135,10 @@ Changelog
   [Julian Infanger]
 
 - Package adjustments
+
   - Remove ftw.slider.Container from navigation
   - Remove ftw.slider.Container and ftw.slider.Pane from searchable types
+
   [elio.schmutz]
 
 - Added support for plone.app.multilingual.

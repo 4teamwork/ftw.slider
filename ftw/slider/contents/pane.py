@@ -1,5 +1,6 @@
 from ftw.slider import _
 from ftw.slider.interfaces import IPane
+from plone.app.dexterity import PloneMessageFactory as _PMF
 from plone.app.textfield import RichText
 from plone.dexterity.content import Container
 from plone.directives import form
@@ -15,6 +16,11 @@ from zope.interface.interface import invariant
 
 
 class IPaneSchema(Schema):
+
+    title = schema.TextLine(
+        title=_PMF(u'label_title', default=u'Title'),
+        required=True
+        )
 
     text = RichText(
         title=_(u'label_text', default=u'Text'),

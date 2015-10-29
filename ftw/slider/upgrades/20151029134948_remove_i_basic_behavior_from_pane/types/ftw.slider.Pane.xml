@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<object name="ftw.slider.Pane" meta_type="Dexterity FTI" >
+
+  <property name="behaviors">
+    <element value="plone.app.dexterity.behaviors.metadata.IBasic" remove="True"/>
+  </property>
+
+</object>
