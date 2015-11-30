@@ -5,6 +5,10 @@ Changelog
 2.3.1 (unreleased)
 ------------------
 
+- Register ftw.slider.slider viewlet on IViewView to prevent rendering the
+  viewlet on non-canonical views.
+  [elioschmutz]
+
 - Update sliderpane for accessiblity
 
   - Show always empty image alt and title attributes on a pane
