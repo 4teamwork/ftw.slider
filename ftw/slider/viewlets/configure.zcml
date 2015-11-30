@@ -8,6 +8,7 @@
       for="*"
       name="ftw.slider.slider"
       manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+      view="plone.app.layout.globals.interfaces.IViewView"
       class=".slider.SliderViewlet"
       permission="zope2.View"
       />
