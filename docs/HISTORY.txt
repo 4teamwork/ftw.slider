@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.1 (unreleased)
+2.3.1 (2015-11-30)
 ------------------
 
 - Register ftw.slider.slider viewlet on IViewView to prevent rendering the
