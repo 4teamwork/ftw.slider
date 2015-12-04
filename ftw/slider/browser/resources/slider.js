@@ -106,6 +106,9 @@
       if(config.arrowsOnHover) {
         element.addClass("arrowsOnHover");
       }
+
+      element.find('.sliderPane').css('visibility', 'visible');
+
     };
 
     var update = function(updatedElement, updatedConfig) {
