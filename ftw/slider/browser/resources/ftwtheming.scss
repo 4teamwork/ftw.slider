@@ -49,6 +49,7 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
   .sliderPane {
     position: relative;
     margin: 0 5px 0 5px;
+    visibility: hidden;
 
     .sliderText {
       max-width: 400px;

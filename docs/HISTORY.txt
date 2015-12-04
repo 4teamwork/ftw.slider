@@ -5,7 +5,12 @@ Changelog
 2.3.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix slider pane initialization.
+  The slider panes are invisible per default.
+  After the slider is initialized by the javascript, the panes will be visible.
+  This fix prenet ugly stylings while loading the slider.
+  https://github.com/4teamwork/ftw.slider/issues/51
+  [elioschmutz]
 
 
 2.3.1 (2015-11-30)
