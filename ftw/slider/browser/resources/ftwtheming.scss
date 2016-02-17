@@ -46,6 +46,18 @@ $slider-button-start-pause-text-color: $gray-lighter !default;
     }
   }
 
+  .slick-dots {
+    @include ul(inline);
+    text-align: center;
+    button {
+      border-color: black;
+    }
+    .slick-active button {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+
   .sliderPane {
     position: relative;
     margin: 0 5px 0 5px;
