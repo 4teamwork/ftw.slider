@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.3 (unreleased)
+2.3.3 (2016-02-19)
 ------------------
 
 - Update slick to 1.5.9.
