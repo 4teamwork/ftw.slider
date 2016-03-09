@@ -4,7 +4,9 @@
   <div id="slider-wrapper"
        tal:attributes="class python:slider_enabled and 'enabled' or None"
        tal:condition="panes">
-    <div id="slider-panes" tal:attributes="data-settings view/get_slick_config">
+    <div id="slider-panes"
+         tal:attributes="data-settings view/get_slick_config"
+         class="sliderPanes">
       <div tal:repeat="pane panes"
            tal:attributes="class python:pane.text and 'sliderPane sliderPaneHasText' or 'sliderPane'">
 
