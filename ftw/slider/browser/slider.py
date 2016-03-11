@@ -18,17 +18,21 @@ class SliderView(BrowserView):
         return self.context.getFolderContents(full_objects=True)
 
     def extend_translations(self, config):
-        translations = {
-            'play': translate(_(u'label_slider_play', default=u'Play'),
-                              context=self.request),
-            'pause': translate(_(u'label_slider_pause', default=u'Pause'),
-                               context=self.request),
-            'next': translate(_(u'label_slider_next', default=u'Next'),
-                              context=self.request),
-            'prev': translate(_(u'label_slider_prev', default=u'Previous'),
-                              context=self.request),
+        labels = {
+            'play': _(u'label_slider_play', default=u'Play'),
+            'pause': _(u'label_slider_pause', default=u'Pause'),
+            'next': _(u'label_slider_next', default=u'Next'),
+            'prev': _(u'label_slider_prev', default=u'Previous'),
         }
-        config['labels'] = translations
+
+        user_config = config.get('labels', {})
+
+        for label, message in labels.iteritems():
+            if label not in user_config:
+                user_config[label] = translate(message, context=self.request)
+
+        config['labels'] = user_config
+
         return config
 
     def get_slick_config(self):
