@@ -2,10 +2,12 @@ Changelog
 =========
 
 
-2.3.4 (unreleased)
+2.4.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add compatibility for Plone sites not using ftw.theming.
+  Attention: These styling changes are not backwards compatible with exising Plone sites using ftw.theming.
+  [Kevin Bieri]
 
 
 2.3.3 (2016-02-19)

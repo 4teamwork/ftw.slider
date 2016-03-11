@@ -1,178 +1,122 @@
 @include portal-type-font-awesome-icon(ftw-slider-container, caret-square-o-right);
-
 @include portal-type-font-awesome-icon(ftw-slider-pane, caret-square-o-right);
 
-$slider-next-prev-button-size: 40px !default;
-$slider-play-pause-button-size: 40px !default;
-$slider-button-gutter: 10px !default;
-$slider-text-bg-color: #fff !default;
-$slider-text-transparency: .6 !default;
-$slider-text-title-font-size: 20px !default;
-$slider-text-title-font-color: $text-color !default;
-$slider-text-font-size: 16px !default;
-$slider-text-font-color: $text-color !default;
-$slider-button-next-prev-bg-color: $gray-dark !default;
-$slider-button-next-prev-text-color: $gray-lighter !default;
-$slider-button-start-pause-bg-color: $gray-dark !default;
-$slider-button-start-pause-text-color: $gray-lighter !default;
+#slider-wrapper {
+  margin-bottom: $margin-vertical;
+}
 
-@include declare_variables(
-  slider-button-size,
-  slider-button-gutter,
-  slider-text-bg-color,
-  slider-text-transparency,
-  slider-text-title-font-size,
-  slider-text-title-font-color,
-  slider-text-font-size,
-  slider-text-font-color,
-  slider-button-bg-color,
-  slider-button-text-color);
-
-.sliderPanes {
-  &.OnlyPane .sliderPane {
-    margin: 0;
-  }
-
-  &.arrowsOnHover {
-    > button {
-      &.slick-next, &.slick-prev {
-        display: none;
-      }
-    }
-    &:hover {
-      > button {
-        display: block;
-      }
-    }
-  }
-
-  .slick-dots {
-    @include ul(inline);
-    text-align: center;
-    button {
-      border-color: black;
-    }
-    .slick-active button {
-      background-color: $primary-color;
-      color: #fff;
-    }
-  }
-
-  .sliderPane {
-    position: relative;
-    margin: 0 5px 0 5px;
-    visibility: hidden;
-
-    .sliderText {
-      max-width: 400px;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      box-sizing: border-box;
-      background-color: $slider-text-bg-color;
-      opacity: $slider-text-transparency;
-      padding: 15px 10px;
-
-      > p {
-        font-size: $slider-text-font-size;
-        color: $slider-text-font-color;
-
-        &.documentFirstHeading {
-          margin: 0;
-          font-size: $slider-text-title-font-size;
-          color: $slider-text-title-font-color;
-        }
-      }
-    }
-
-    .sliderImage {
-      img {
-        margin: 0;
-        height: auto;
-      }
-    }
-
-    > a .sliderText .documentFirstHeading {
-      color: $link-color;
-    }
-  }
-
+.slick-slider {
   > button {
     @extend .fa-icon;
-    border: none;
-    cursor: pointer;
-    display: block;
-    float: left;
-    font-size: 0;
-    line-height: 0;
-    position: absolute;
-    top: $slider-button-gutter;
+    @include auto-text-color($color-content-background);
+    background-color: $color-content-background;
+    min-width: $line-height-base;
+    min-height: $line-height-base;
+    padding: 0;
+    margin: 0;
 
-    &.slick-play {
-      @extend .fa-play;
-      background-color: $slider-button-start-pause-bg-color;
-      color: $slider-button-start-pause-text-color;
-      width: $slider-play-pause-button-size;
-      height: $slider-play-pause-button-size;
-      top: $slider-button-gutter;
-      right: $slider-button-gutter * 2 + $slider-play-pause-button-size;
-      border: 1px solid #fff;
-      &:before {
-        font-size: $slider-play-pause-button-size / 2;
-        line-height: $slider-play-pause-button-size - 2;
-        margin-right: 0;
-      }
-    }
-
-    &.slick-pause {
-      @extend .fa-pause;
-      background-color: $slider-button-start-pause-bg-color;
-      color: $slider-button-start-pause-text-color;
-      width: $slider-play-pause-button-size;
-      height: $slider-play-pause-button-size;
-      top: $slider-button-gutter;
-      right: $slider-button-gutter;
-      border: 1px solid #fff;
-      &:before {
-        font-size: $slider-play-pause-button-size / 2;
-        line-height: $slider-play-pause-button-size - 2;
-        margin-right: 0;
-      }
+    &:before {
+      font-size: $font-size-base;
+      vertical-align: middle;
     }
 
     &.slick-next {
       @extend .fa-chevron-right;
-      left: auto;
-      background-color: $slider-button-next-prev-bg-color;
-      color: $slider-button-next-prev-text-color;
-      margin-top: -$slider-next-prev-button-size / 2;
-      width: $slider-next-prev-button-size;
-      height: $slider-next-prev-button-size;
-      right: 0;
+      position: absolute;
+      right: $padding-vertical;
       top: 50%;
-      &:before {
-        font-size: $slider-next-prev-button-size / 2;
-        line-height: $slider-next-prev-button-size;
-        margin-right: 0;
+      margin-top: - $line-height-base;
+    }
+    &.slick-prev {
+      @extend .fa-chevron-left;
+      position: absolute;
+      left: $padding-vertical;
+      top: 50%;
+      margin-top: - $line-height-base;
+    }
+    &.slick-play {
+      @extend .fa-play;
+      position: absolute;
+      top: $padding-vertical;
+      left: $padding-vertical;
+    }
+    &.slick-pause {
+      @extend .fa-pause;
+      position: absolute;
+      top: $padding-vertical;
+      left: $line-height-base + $padding-vertical * 2;
+    }
+  }
+}
+
+.slick-dots {
+  @include list-horizontal();
+  text-align: center;
+  padding: $padding-vertical $padding-horizontal;
+
+  > li {
+    display: inline-block;
+    float: none;
+
+    &.slick-active {
+      > button {
+        @include label-round($color-secondary);
+        margin-right: $line-height-base / 2;
+        font-size: 1em;
       }
     }
 
-    &.slick-prev {
-      @extend .fa-chevron-left;
-      background-color: $slider-button-next-prev-bg-color;
-      color: $slider-button-next-prev-text-color;
-      left: 0;
-      margin-top: -$slider-next-prev-button-size / 2;
-      width: $slider-next-prev-button-size;
-      height: $slider-next-prev-button-size;
-      right: auto;
-      top: 50%;
-      &:before {
-        font-size: $slider-next-prev-button-size / 2;
-        line-height: $slider-next-prev-button-size;
-        margin-right: 0;
-      }
+    > button {
+      @include label-round();
+      margin-right: $line-height-base / 2;
+      font-size: 1em;
+    }
+  }
+
+}
+
+.sliderPane {
+  position: relative;
+  margin-right: $margin-horizontal;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.OnlyPane .sliderPane {
+  margin: 0;
+}
+
+.sliderText {
+  padding: $padding-vertical $padding-horizontal;
+  position: absolute;
+  bottom: $line-height-base;
+  left: $line-height-base;
+  right: 30%;
+  background-color: $color-content-background;
+
+  > p {
+    font-size: $font-size-base;
+
+    &.title {
+      font-family: $font-family-heading;
+      font-weight: $font-weight-heading;
+      font-size: $font-size-h2;
+      margin-bottom: $margin-heading-vertical;
+    }
+  }
+}
+
+.arrowsOnHover {
+  > button {
+    &.slick-next, &.slick-prev {
+      display: none;
+    }
+  }
+  &:hover {
+    > button {
+      display: block;
     }
   }
 }
