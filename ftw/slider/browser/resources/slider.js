@@ -14,7 +14,8 @@
       arrowsOnHover: true,
       arrows: false,
       canNext: true,
-      canPrev: true
+      canPrev: true,
+      buttonText: false
     }, config);
 
     var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}"></button>';
@@ -28,7 +29,10 @@
     var prev = function() { element.slick("slickPrev"); };
 
     var buildButton = function(name, label, handler) {
-      var button = $(buttonTemplate.replace(/{{:action}}/g, name)).text(label);
+      var button = $(buttonTemplate.replace(/{{:action}}/g, name));
+      if(config.buttonText) {
+        button.text(label);
+      }
       if(handler) {
         button.on("click", handler);
       }
