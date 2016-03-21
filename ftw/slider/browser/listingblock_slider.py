@@ -10,7 +10,7 @@ class ListingBlockSlider(listingblock_gallery_view.ListingBlockGalleryView):
         if field:
             settings = field.get(self.context)
         return """jQuery(function($) {
-                    $('#uid_%(uid)s .sliderGallery').slick(%(settings)s);
+                    new Slider('#uid_%(uid)s .sliderGallery', %(settings)s);
                   });""" % {
                       'uid': self.context.UID(),
                       'settings': settings,

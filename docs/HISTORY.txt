@@ -5,6 +5,9 @@ Changelog
 2.4.0 (unreleased)
 ------------------
 
+- Add compatibility for ftw.slider using new initialisation syntax.
+  [Kevin Bieri]
+
 - Add compatibility for Plone sites not using ftw.theming.
   Attention: These styling changes are not backwards compatible with exising Plone sites using ftw.theming.
   [Kevin Bieri]
