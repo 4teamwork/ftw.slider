@@ -15,3 +15,7 @@ class ListingBlockSlider(listingblock_gallery_view.ListingBlockGalleryView):
                       'uid': self.context.UID(),
                       'settings': settings,
                   }
+
+    def get_image_tag(self, img):
+        scaler = img.restrictedTraverse('@@images')
+        return scaler.scale('image', scale='sliderblock', direction='down')
