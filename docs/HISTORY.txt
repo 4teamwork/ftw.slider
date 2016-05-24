@@ -5,6 +5,8 @@ Changelog
 2.4.0 (unreleased)
 ------------------
 
+- Let Site Administrator add panes on site root. [jone]
+
 - Use image cropping for sliderblock images to keep the ratio for different images.
   [Kevin Bieri]
 
