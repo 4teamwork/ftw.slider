@@ -6,6 +6,7 @@ version = '2.3.4.dev0'
 tests_require = [
     'ftw.testing [splinter]',
     'ftw.builder',
+    'ftw.contentpage',
     'ftw.testbrowser',
     'plone.app.testing',
     'plone.resource',
