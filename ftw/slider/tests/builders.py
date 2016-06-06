@@ -1,6 +1,7 @@
 from StringIO import StringIO
 from ftw.builder import builder_registry
 from ftw.builder.dexterity import DexterityBuilder
+import ftw.contentpage.tests.builders
 
 
 class SliderContainerBuilder(DexterityBuilder):

@@ -12,7 +12,9 @@
           <div class="imgTitle">
             <h3 tal:content="img/Title" />
           </div>
-          <img tal:replace="structure python: view.get_image_tag(img)" />
+          <tal:block tal:define="image_tag python: view.get_image_tag(img)">
+              <img tal:condition="image_tag" tal:replace="structure image_tag" />
+          </tal:block>
           <div class="imgDescription"
                tal:define="img_nr python: repeat['img'].index + 1;
                            img_len python: len(imgs)">

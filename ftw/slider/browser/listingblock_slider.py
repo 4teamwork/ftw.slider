@@ -18,4 +18,7 @@ class ListingBlockSlider(listingblock_gallery_view.ListingBlockGalleryView):
 
     def get_image_tag(self, img):
         scaler = img.restrictedTraverse('@@images')
-        return scaler.scale('image', scale='sliderblock', direction='down')
+        scale = scaler.scale('image', scale='sliderblock', direction='down')
+        if not scale:
+            return ''
+        return scale.tag()
