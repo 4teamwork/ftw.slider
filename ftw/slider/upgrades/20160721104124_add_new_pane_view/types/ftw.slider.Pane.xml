@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<object name="ftw.slider.Pane"
+        meta_type="Dexterity FTI"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        xmlns:zcml="http://xml.zope.org/namespaces/zcml"
+        i18n:domain="ftw.slider">
+
+  <property name="default_view">sliderpane_view</property>
+  <property name="view_methods">
+    <element value="sliderpane_view"/>
+  </property>
+
+</object>

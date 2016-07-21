@@ -5,7 +5,8 @@ Changelog
 2.3.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add browser pane redirect view, which behaves like the one from links.
+  [mathias.leimgruber]
 
 
 2.3.3 (2016-02-19)
