@@ -52,10 +52,11 @@ class TestSliderPaneView(TestCase):
         target = create(Builder('folder')
                         .titled(u'Target folder'))
 
+        portal_path = '/'.join(self.portal.getPhysicalPath())
         pane = create(Builder('slider pane')
                       .within(self.container)
                       .titled(u'Pane 1')
-                      .having(link='/'.join(target.getPhysicalPath()))
+                      .having(link='/'.join(target.getPhysicalPath())[portal_path:])
                       .with_dummy_image())
 
         browser.login().visit(pane)
@@ -66,10 +67,11 @@ class TestSliderPaneView(TestCase):
         target = create(Builder('folder')
                         .titled(u'Target folder'))
 
+        portal_path = '/'.join(self.portal.getPhysicalPath())
         pane = create(Builder('slider pane')
                       .within(self.container)
                       .titled(u'Pane 1')
-                      .having(link='/'.join(target.getPhysicalPath()))
+                      .having(link='/'.join(target.getPhysicalPath())[portal_path:])
                       .with_dummy_image())
 
         browser.visit(pane)

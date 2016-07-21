@@ -25,9 +25,7 @@ class SliderPaneView(BrowserView):
 
     def get_link(self):
         if self.context.link:
-            portal_path = '/'.join(api.portal.get().getPhysicalPath())
-            path = self.context.link[len(portal_path):]
-            return api.portal.get().absolute_url() + path
+            return api.portal.get().absolute_url() + self.context.link
 
         elif self.context.external_url:
             return self.context.external_url

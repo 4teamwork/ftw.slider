@@ -28,7 +28,7 @@
             </tr>
             <tr>
                 <th i18n:translate="label_text">Text</th>
-                <td><tal:text condition="context/text" replace=context/text/ouput"></tal:text></td>
+                <td><tal:text condition="context/text" replace="structure context/text/output" /></td>
             </tr>
             <tr>
                 <th i18n:translate="label_link">Link</th>
@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <th i18n:translate="label_image">Image</th>
-                <td tal:content="context/image" />
+                <td><tal:image replace="structure python:context.restrictedTraverse('@@images').tag('image', scale='preview')" /></td>
             </tr>
         </table>
 
