@@ -1,0 +1,52 @@
+<html xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="ftw.slider">
+
+<body>
+
+    <metal:header fill-slot="header" i18n:domain="plone">
+        <dl class="portalMessage info"
+            tal:condition="python: checkPermission('Modify portal content', context)">
+            <dt i18n:translate="">Info</dt>
+            <dd i18n:translate="message_permissions_blocking_link_redirect">
+              You see this page because you have permission to edit this link.
+              Others will be immediately redirected to the link's target URL.
+            </dd>
+        </dl>
+    </metal:header>
+
+    <metal:content-core fill-slot="content-core">
+        <metal:block define-macro="content-core">
+
+
+        <table class="listing">
+            <tr>
+                <th i18n:translate="label_title">Title</th>
+                <td tal:content="context/Title" />
+            </tr>
+            <tr>
+                <th i18n:translate="label_text">Text</th>
+                <td><tal:text condition="context/text" replace="structure context/text/output" /></td>
+            </tr>
+            <tr>
+                <th i18n:translate="label_link">Link</th>
+                <td tal:content="context/link" />
+            </tr>
+            <tr>
+                <th i18n:translate="label_external_url">External URL</th>
+                <td tal:content="context/external_url" />
+            </tr>
+            <tr>
+                <th i18n:translate="label_image">Image</th>
+                <td><tal:image replace="structure python:context.restrictedTraverse('@@images').tag('image', scale='preview')" /></td>
+            </tr>
+        </table>
+
+        </metal:block>
+    </metal:content-core>
+
+</body>
+</html>
+
