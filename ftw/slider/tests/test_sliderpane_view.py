@@ -56,7 +56,7 @@ class TestSliderPaneView(TestCase):
         pane = create(Builder('slider pane')
                       .within(self.container)
                       .titled(u'Pane 1')
-                      .having(link='/'.join(target.getPhysicalPath())[portal_path:])
+                      .having(link='/'.join(target.getPhysicalPath())[len(portal_path):])
                       .with_dummy_image())
 
         browser.login().visit(pane)
@@ -71,7 +71,7 @@ class TestSliderPaneView(TestCase):
         pane = create(Builder('slider pane')
                       .within(self.container)
                       .titled(u'Pane 1')
-                      .having(link='/'.join(target.getPhysicalPath())[portal_path:])
+                      .having(link='/'.join(target.getPhysicalPath())[len(portal_path):])
                       .with_dummy_image())
 
         browser.visit(pane)
