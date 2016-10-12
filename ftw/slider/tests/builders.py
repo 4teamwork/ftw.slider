@@ -2,7 +2,6 @@ from ftw.builder import builder_registry
 from ftw.builder.dexterity import DexterityBuilder
 from plone.namedfile.file import NamedBlobImage
 from StringIO import StringIO
-import ftw.contentpage.tests.builders
 
 
 class SliderContainerBuilder(DexterityBuilder):

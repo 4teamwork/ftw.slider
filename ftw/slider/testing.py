@@ -10,7 +10,6 @@ from plone.app.testing import TEST_USER_NAME
 from plone.app.testing import applyProfile
 from plone.app.testing import login
 from zope.configuration import xmlconfig
-from plone.testing import z2
 
 
 class SliderLayer(PloneSandboxLayer):
@@ -26,15 +25,10 @@ class SliderLayer(PloneSandboxLayer):
             '</configure>',
             context=configurationContext)
 
-        z2.installProduct(app, 'ftw.contentpage')
-
     def setUpPloneSite(self, portal):
         login(portal, TEST_USER_NAME)
         # Install into Plone site using portal_setup
         applyProfile(portal, 'ftw.slider:default')
-
-        # Install "ftw.contentpage"
-        applyProfile(portal, 'ftw.contentpage:default')
 
 
 SLIDER_TAGS_FIXTURE = SliderLayer()

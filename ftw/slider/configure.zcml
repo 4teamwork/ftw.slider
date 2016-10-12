@@ -30,13 +30,4 @@
       directory="./upgrades"
       />
 
-  <configure zcml:condition="installed ftw.contentpage">
-    <include package="archetypes.schemaextender" />
-    <adapter factory=".extender.SlickSettingsExtender"
-             provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"
-             name="ftw.slider.slicksettings.extender" />
-  </configure>
-
-
-
 </configure>
