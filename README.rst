@@ -9,10 +9,6 @@ In each slider-pane you can define:
 - HTML text
 - A link
 
-If `ftw.contentpage <http://github.com/4teamwork/ftw.contentpage>`_ is installed there will be registered a new view for the `ListingBlock` displaying images in a carousel.
-See last screenshot.
-
-
 
 Installation
 ============
@@ -29,6 +25,14 @@ Installation
 - Run `bin/buildout`
 
 - Install the generic import profile.
+
+
+Upgrade from 2.4.x to 3.0.x
+===========================
+
+The ``ftw.contentpage`` ListingBlock integration has been removed with the 3.0.0 release.
+If you are at this point, please consider upgrading your ``ftw.contentpage`` installation to ``ftw.simplelaoyut``.
+With ``ftw.simpelayout`` you can install ``ftw.sliderblock`` to get the same feature set.
 
 
 Compatibility
@@ -55,9 +59,6 @@ The slideshow is responsive (here OneGovBox as example):
 
 .. image:: https://github.com/4teamwork/ftw.slider/raw/master/docs/screenshot_onegov.png
 
-The `ftw.contentpage` carousel block with default plone:
-
-.. image:: https://github.com/4teamwork/ftw.slider/raw/master/docs/screenshot_listingblock_plone.png
 
 Links
 =====
