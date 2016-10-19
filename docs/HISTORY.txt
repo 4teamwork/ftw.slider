@@ -5,6 +5,9 @@ Changelog
 3.0.0 (unreleased)
 ------------------
 
+- Replace plone.formwidget.contenttree with ftw.referencewidget.
+  [mathias.leimgruber]
+
 - Remove ftw.contentpage test dependency and everything related to ftw.contentpage.
   ftw.contentpage is deprecated and is replaced by ftw.simplelaylout.
   This functionality is now implemented in ftw.sliderblock.

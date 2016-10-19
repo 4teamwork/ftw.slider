@@ -1,3 +1,4 @@
+from ftw.referencewidget.widget import ReferenceWidgetFactory
 from ftw.slider import _
 from ftw.slider.interfaces import IPane
 from plone.app.dexterity import PloneMessageFactory as _PMF
@@ -5,8 +6,6 @@ from plone.app.textfield import RichText
 from plone.dexterity.content import Container
 from plone.directives import form
 from plone.directives.form import Schema
-from plone.formwidget.contenttree import ContentTreeFieldWidget
-from plone.formwidget.contenttree import PathSourceBinder
 from plone.namedfile.field import NamedImage
 from plone.supermodel import model
 from zope import schema
@@ -34,12 +33,11 @@ class IPaneSchema(Schema):
         required=True,
         )
 
-    form.widget(link=ContentTreeFieldWidget)
-    link = schema.Choice(
+    form.widget(link=ReferenceWidgetFactory)
+    link = schema.TextLine(
         title=_(u'label_link', default=u'Link'),
         description=_(u'help_link', default=u''),
         required=False,
-        source=PathSourceBinder()
         )
 
     external_url = schema.URI(
