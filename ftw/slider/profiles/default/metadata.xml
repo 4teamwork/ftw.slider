@@ -2,6 +2,6 @@
 <metadata>
   <dependencies>
     <dependency>profile-plone.app.dexterity:default</dependency>
-    <dependency>profile-plone.formwidget.contenttree:default</dependency>
+    <dependency>profile-ftw.referencewidget:default</dependency>
   </dependencies>
 </metadata>

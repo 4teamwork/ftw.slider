@@ -1,15 +1,16 @@
 from ftw.builder.testing import BUILDER_LAYER
 from ftw.builder.testing import functional_session_factory
 from ftw.builder.testing import set_builder_session_factory
-from ftw.slider.tests import builders
 from ftw.testing import FunctionalSplinterTesting
+from plone.app.testing import applyProfile
 from plone.app.testing import IntegrationTesting
+from plone.app.testing import login
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import TEST_USER_NAME
-from plone.app.testing import applyProfile
-from plone.app.testing import login
 from zope.configuration import xmlconfig
+import ftw.referencewidget.tests.widgets
+import ftw.slider.tests.builders
 
 
 class SliderLayer(PloneSandboxLayer):
