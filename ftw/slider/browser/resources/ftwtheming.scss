@@ -9,6 +9,7 @@
   > button {
     @extend .fa-icon;
     @include auto-text-color($color-content-background);
+    border-radius: $border-radius-primary;
     background-color: $color-content-background;
     min-width: $line-height-base;
     min-height: $line-height-base;
