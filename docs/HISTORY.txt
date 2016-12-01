@@ -5,6 +5,9 @@ Changelog
 3.0.1 (unreleased)
 ------------------
 
+- Fix internal url concatenation: support path with or without leading slash.
+  [mathias.leimgruber]
+
 - Fix borderradius of slider button.
   [Kevin Bieri]
 
