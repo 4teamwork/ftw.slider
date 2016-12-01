@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.1 (unreleased)
+3.0.1 (2016-12-01)
 ------------------
 
 - Fix internal url concatenation: support path with or without leading slash.
