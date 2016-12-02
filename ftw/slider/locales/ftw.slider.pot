@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-12-02 11:10+0000\n"
+"POT-Creation-Date: 2016-12-02 11:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "Update type settings"
 msgstr ""
 
 #. Default: "It's not possible to add a link and an external url at the same time"
-#: ./ftw/slider/contents/pane.py:54
+#: ./ftw/slider/contents/pane.py:61
 msgid "error_message_links"
 msgstr ""
 
@@ -59,30 +59,35 @@ msgstr ""
 msgid "ftw.slider"
 msgstr ""
 
-#: ./ftw/slider/contents/pane.py:39
+#: ./ftw/slider/contents/pane.py:46
 msgid "help_link"
 msgstr ""
 
-#: ./ftw/slider/contents/pane.py:26
+#: ./ftw/slider/contents/pane.py:33
 msgid "help_text"
 msgstr ""
 
 #. Default: "External URL"
-#: ./ftw/slider/browser/pane.pt:38
-#: ./ftw/slider/contents/pane.py:44
+#: ./ftw/slider/browser/pane.pt:42
+#: ./ftw/slider/contents/pane.py:51
 msgid "label_external_url"
 msgstr ""
 
 #. Default: "Image"
-#: ./ftw/slider/browser/pane.pt:42
-#: ./ftw/slider/contents/pane.py:32
+#: ./ftw/slider/browser/pane.pt:46
+#: ./ftw/slider/contents/pane.py:39
 msgid "label_image"
 msgstr ""
 
 #. Default: "Link"
-#: ./ftw/slider/browser/pane.pt:34
-#: ./ftw/slider/contents/pane.py:38
+#: ./ftw/slider/browser/pane.pt:38
+#: ./ftw/slider/contents/pane.py:45
 msgid "label_link"
+msgstr ""
+
+#. Default: "Show title"
+#: ./ftw/slider/browser/pane.pt:30
+msgid "label_show_title"
 msgstr ""
 
 #. Default: "Next"
@@ -106,8 +111,8 @@ msgid "label_slider_prev"
 msgstr ""
 
 #. Default: "Text"
-#: ./ftw/slider/browser/pane.pt:30
-#: ./ftw/slider/contents/pane.py:25
+#: ./ftw/slider/browser/pane.pt:34
+#: ./ftw/slider/contents/pane.py:32
 msgid "label_text"
 msgstr ""
 

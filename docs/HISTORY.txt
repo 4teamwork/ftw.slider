@@ -5,7 +5,10 @@ Changelog
 3.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- New option on the slider planes allows to render the title of the pane
+  without the need of adding a slider pane text. Until now the title was only
+  rendered when the pane had some text.
+  [mbaechtold]
 
 
 3.0.1 (2016-12-01)
