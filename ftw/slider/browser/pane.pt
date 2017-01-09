@@ -27,6 +27,10 @@
                 <td tal:content="context/Title" />
             </tr>
             <tr>
+                <th i18n:translate="label_show_title">Show title</th>
+                <td tal:content="context/show_title" />
+            </tr>
+            <tr>
                 <th i18n:translate="label_text">Text</th>
                 <td><tal:text condition="context/text" replace="structure context/text/output" /></td>
             </tr>

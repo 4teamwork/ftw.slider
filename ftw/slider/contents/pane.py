@@ -21,6 +21,13 @@ class IPaneSchema(Schema):
         required=True
         )
 
+    show_title = schema.Bool(
+        title=_PMF(u'label_show_title', default=u'Show title'),
+        required=False,
+        default=False,
+        missing_value=False,
+    )
+
     text = RichText(
         title=_(u'label_text', default=u'Text'),
         description=_(u'help_text', default=u''),
