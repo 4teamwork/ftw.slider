@@ -5,7 +5,8 @@ Changelog
 3.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix field label translation.
+  [mbaechtold]
 
 
 3.1.0 (2017-01-10)
