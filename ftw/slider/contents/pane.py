@@ -22,7 +22,7 @@ class IPaneSchema(Schema):
         )
 
     show_title = schema.Bool(
-        title=_PMF(u'label_show_title', default=u'Show title'),
+        title=_(u'label_show_title', default=u'Show title'),
         required=False,
         default=False,
         missing_value=False,
