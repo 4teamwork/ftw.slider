@@ -85,6 +85,22 @@
   }
 }
 
+.slider-link {
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:before {
+    position: absolute;
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, white 50%, white);
+    top: 0;
+    left: 0;
+    padding: 5px 30px 30px 5px;
+    border-left: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+  }
+}
+
 .OnlyPane .sliderPane {
   margin: 0;
 }
