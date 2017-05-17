@@ -5,6 +5,8 @@ Changelog
 3.1.2 (unreleased)
 ------------------
 
+- Fix rendering of external link. [Kevin Bieri]
+
 - Remove plone-site selector !These changes are backwards incompatible!. [Kevin Bieri]
 
 
