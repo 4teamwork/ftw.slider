@@ -101,3 +101,24 @@ class TestSliderPaneView(TestCase):
                           "edit this link. Others will be immediately "
                           "redirected to the link's target URL.",
                           info_messages()[0])
+
+    @browsing
+    def test_internal_url_on_slider_view(self, browser):
+        target = create(Builder('folder')
+                        .titled(u'Target folder'))
+
+        portal_path = '/'.join(self.portal.getPhysicalPath())
+        create(Builder('slider pane')
+               .within(self.container)
+               .titled(u'Pane 1')
+               .having(link='/'.join(target.getPhysicalPath())[len(portal_path):])
+               .with_dummy_image())
+
+        # The internal links of the panes in the slider view must be of the form
+        # "http://nohost/plone/target-folder" and not only "/target-folder" in order
+        # for the links to work on localhost too.
+        browser.login().visit(self.container, view='slider_view')
+        self.assertEqual(
+            ['http://nohost/plone/target-folder'],
+            [link.attrib['href'] for link in browser.css('.sliderPane a')]
+        )
