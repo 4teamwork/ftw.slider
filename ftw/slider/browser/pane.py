@@ -1,3 +1,4 @@
+from ftw.slider.browser import utils
 from plone import api
 from Products.Five.browser import BrowserView
 
@@ -24,14 +25,4 @@ class SliderPaneView(BrowserView):
             return ''
 
     def get_link(self):
-        link = self.context.link
-        if link:
-            return '{0}{1}'.format(
-                api.portal.get().absolute_url(),
-                link.startswith('/') and link or '/' + link)
-
-        elif self.context.external_url:
-            return self.context.external_url
-
-        else:
-            return ''
+        return utils.get_pane_link(self.context)

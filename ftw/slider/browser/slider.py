@@ -1,4 +1,5 @@
 from ftw.slider import _
+from ftw.slider.browser import utils
 from plone.dexterity.browser.add import DefaultAddForm, DefaultAddView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.statusmessages.interfaces import IStatusMessage
@@ -43,6 +44,9 @@ class SliderView(BrowserView):
         config = json.loads(self.context.slick_config)
         config = self.extend_translations(config)
         return json.dumps(config)
+
+    def get_pane_link(self, pane):
+        return utils.get_pane_link(pane)
 
 
 class ContainerAddForm(DefaultAddForm):

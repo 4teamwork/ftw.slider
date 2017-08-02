@@ -10,8 +10,7 @@
       <div tal:repeat="pane panes"
            tal:attributes="class python:pane.text and 'sliderPane sliderPaneHasText' or 'sliderPane'">
 
-        <tal:pane tal:define="internal_link string:${portal/absolute_url}${pane/link};
-                              link python: internal_link and pane.link or pane.external_url;">
+        <tal:pane tal:define="link python: view.get_pane_link(pane)">
           <a tal:omit-tag="not:link"
              tal:attributes="href link"
              class="slider-link">
