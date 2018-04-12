@@ -134,10 +134,14 @@ $slider-color: contrast($slider-bg-start, #FFF, #000);
     #slider-panes {
       background: $slider-bg-end;
     }
-    #container #slider-wrapper .sliderText {
-      position: relative;
-      width: 96%;
-      padding: 2%;
+    #container {
+      #slider-wrapper, .sliderWrapper {
+        .sliderText {
+          position: relative;
+          padding: 2%;
+          box-sizing: border-box;
+        }
+      }
     }
 
 }
