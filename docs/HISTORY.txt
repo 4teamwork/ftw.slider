@@ -5,6 +5,7 @@ Changelog
 3.1.5 (unreleased)
 ------------------
 
+- Use NamedImage instead NamedBlobImage for tests as it is declaerd in the IPaneSchema. [elioschmutz]
 - Remove dependency on ftw.testing[splinter] which have already been removed in 3.1.3 but readded in 3.1.4. [elioschmutz]
 
 
