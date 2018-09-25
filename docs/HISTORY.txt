@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.5 (unreleased)
+3.1.5 (2018-09-25)
 ------------------
 
 - Use NamedImage instead NamedBlobImage for tests as it is declaerd in the IPaneSchema. [elioschmutz]
