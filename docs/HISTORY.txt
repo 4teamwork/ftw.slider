@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Add classifier for Plone 5.1 support. [busykoala]
+- Fix pixel rounding issues on slick slider [Nachtalb]
 
 
 3.3.0 (2019-06-07)
