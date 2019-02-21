@@ -47,6 +47,26 @@ If you want to display a slideshow on your content, just create a `ftw.slider.Co
 
 There is a viewlet which checks your content for a slider-container and displays its containing panes.
 
+Settings
+--------
+
+To ensure access4all you can use the settings `canNext` which is the option
+for en/disabling the slider button to move to the next image (when set true the
+button is shown, when false it is hidden), `canPrev` equivalent for the last
+image button and the `arrowsOnHover` option (when true only showing the buttons
+on hover, when false showing them always).
+
+Other settings are `autoplay` (when true automatically sliding to the next
+image after set time) and `autoplaySpeed` (a number for the time to wait until
+sliding to the next image in milliseconds).
+
+Those options are to be set in json format in the configuration textarea of the
+ftw.slider block like:
+
+::
+
+    {"canNext":true, "canPrev":true, "arrowsOnHover":false}
+
 
 Screenshots
 ===========
