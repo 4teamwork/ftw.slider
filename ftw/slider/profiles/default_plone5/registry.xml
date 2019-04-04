@@ -1,0 +1,71 @@
+<registry>
+
+    <!--image properties-->
+    <records
+        interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
+        prefix="plone">
+        <value key="allowed_sizes" purge="false">
+            <element>sliderblock 1200:800</element>
+        </value>
+    </records>
+
+    <!--types_not_searched properties-->
+    <record
+        name="plone.types_not_searched"
+        interface="Products.CMFPlone.interfaces.controlpanel.ISearchSchema"
+        field="types_not_searched">
+        <value>
+            <element>ftw.slider.Container</element>
+            <element>ftw.slider.Pane</element>
+        </value>
+    </record>
+
+    <!--metaTypesNotToList properties-->
+    <!--not registered anymore-->
+
+    <!--javascript resources-->
+    <records prefix="plone.resources/slider_slick_js"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="js">++resource++ftw.slider/slick.min.js</value>
+        <value key="deps">jquery</value>
+    </records>
+
+    <records prefix="plone.resources/slider_js"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="js">++resource++ftw.slider/slider.js</value>
+        <value key="deps">jquery</value>
+    </records>
+
+    <!--css resources-->
+    <records prefix="plone.resources/ftw_slider_css"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="css">
+            <element>++resource++ftw.slider/slider.css</element>
+        </value>
+    </records>
+
+    <records prefix="plone.resources/ftw_slider_slick_css"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="css">
+            <element>++resource++ftw.slider/slick.css</element>
+        </value>
+    </records>
+
+    <!--bundling of js and css resources-->
+    <records prefix="plone.bundles/ftw-slider-resources"
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+        <value key="resources">
+            <element>slider_slick_js</element>
+            <element>slider_js</element>
+            <element>ftw_slider_css</element>
+            <element>ftw_slider_slick_css</element>
+        </value>
+        <value key="enabled">True</value>
+        <value key="depends">plone-legacy</value>
+        <value key="compile">False</value>
+        <value key="jscompilation">++plone++slider/ftw-slider-compiled.js</value>
+        <value key="csscompilation">++plone++slider/ftw-slider-compiled.css</value>
+        <value key="merge_with">default</value>
+    </records>
+
+</registry>

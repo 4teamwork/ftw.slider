@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <permission name="ftw.slider: Add Container" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+    <permission name="ftw.slider: Add Pane" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+      <role name="Site Administrator" />
+    </permission>
+  </permissions>
+</rolemap>

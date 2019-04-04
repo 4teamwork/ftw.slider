@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<registry>
+    <records prefix="plone.resources/slider_slick_js"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True"/>
+    <records prefix="plone.resources/slider_js"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True"/>
+    <records prefix="plone.resources/ftw_slider_css"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True"/>
+    <records prefix="plone.resources/slick.css"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True"/>
+    <records prefix="plone.bundles/ftw-slider-resources"
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'
+             remove="True"/>
+</registry>
