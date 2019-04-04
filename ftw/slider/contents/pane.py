@@ -1,7 +1,7 @@
 from ftw.referencewidget.widget import ReferenceWidgetFactory
 from ftw.slider import _
 from ftw.slider.interfaces import IPane
-from plone.app.dexterity import PloneMessageFactory as _PMF
+from pkg_resources import get_distribution
 from plone.app.textfield import RichText
 from plone.dexterity.content import Container
 from plone.directives import form
@@ -9,9 +9,17 @@ from plone.directives.form import Schema
 from plone.namedfile.field import NamedImage
 from plone.supermodel import model
 from zope import schema
-from zope.interface import implements
 from zope.interface import Invalid
+from zope.interface import implements
 from zope.interface.interface import invariant
+
+
+IS_PLONE_5 = get_distribution('Plone').version >= '5'
+
+if not IS_PLONE_5:
+    from plone.app.dexterity import PloneMessageFactory as _PMF
+else:
+    from Products.CMFPlone import PloneMessageFactory as _PMF
 
 
 class IPaneSchema(Schema):
