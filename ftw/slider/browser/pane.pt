@@ -6,17 +6,6 @@
 
 <body>
 
-    <metal:header fill-slot="header" i18n:domain="plone">
-        <dl class="portalMessage info"
-            tal:condition="python: checkPermission('Modify portal content', context)">
-            <dt i18n:translate="">Info</dt>
-            <dd i18n:translate="message_permissions_blocking_link_redirect">
-              You see this page because you have permission to edit this link.
-              Others will be immediately redirected to the link's target URL.
-            </dd>
-        </dl>
-    </metal:header>
-
     <metal:content-core fill-slot="content-core">
         <metal:block define-macro="content-core">
 
