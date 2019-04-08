@@ -4,6 +4,7 @@ from ftw.slider.contents.container import validate_slick_config
 from ftw.slider.testing import SLIDER_FUNCTIONAL_TESTING
 from ftw.slider.testing import SLIDER_INTEGRATION_TESTING
 from ftw.testbrowser import browsing
+from helper import LanguageToolHelper
 from plone.app.testing import login
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
@@ -12,7 +13,7 @@ from unittest2 import TestCase
 import json
 
 
-class TestSliderConfig(TestCase):
+class TestSliderConfig(TestCase, LanguageToolHelper):
 
     layer = SLIDER_FUNCTIONAL_TESTING
 
@@ -27,10 +28,10 @@ class TestSliderConfig(TestCase):
 
     @browsing
     def test_slider_adds_slick_config_if_available(self, browser):
-        self.portal.portal_languages.manage_setLanguageSettings(
-            'de',
-            ['de'],
-            setUseCombinedLanguageCodes=False)
+        self.manage_set_language_settings(default='de',
+                                          supported=['de'],
+                                          use_combined=False,
+                                          content_negotiation=False)
 
         container = create(Builder('slider container')
                            .within(self.folder)
