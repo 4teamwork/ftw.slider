@@ -145,7 +145,7 @@
 }
 
 li.slAction > a.layout_dummy-dummy-slider {
-  background-image: url(++resource++ftw.slider/slider_block.png);
+  background-image: url('++resource++ftw.slider/slider_block.png');
   background-repeat: no-repeat;
   background-position: center center;
 }
