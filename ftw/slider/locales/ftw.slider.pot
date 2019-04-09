@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-01-16 08:32+0000\n"
+"POT-Creation-Date: 2019-04-09 15:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Slider Pane"
 msgstr ""
 
-#: ./ftw/slider/browser/slider.py:56
+#: ./ftw/slider/browser/slider.py:60
 msgid "There is already a slider pane in this context"
 msgstr ""
 
@@ -51,7 +51,7 @@ msgid "Update type settings"
 msgstr ""
 
 #. Default: "It's not possible to add a link and an external url at the same time"
-#: ./ftw/slider/contents/pane.py:61
+#: ./ftw/slider/contents/pane.py:66
 msgid "error_message_links"
 msgstr ""
 
@@ -59,7 +59,7 @@ msgstr ""
 msgid "ftw.slider"
 msgstr ""
 
-#: ./ftw/slider/contents/pane.py:46
+#: ./ftw/slider/contents/pane.py:51
 msgid "help_link"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 
 #. Default: "External URL"
 #: ./ftw/slider/browser/pane.pt:42
-#: ./ftw/slider/contents/pane.py:51
+#: ./ftw/slider/contents/pane.py:56
 msgid "label_external_url"
 msgstr ""
 
@@ -79,9 +79,14 @@ msgstr ""
 msgid "label_image"
 msgstr ""
 
+#. Default: "Image alt text"
+#: ./ftw/slider/contents/pane.py:44
+msgid "label_image_alt_text"
+msgstr ""
+
 #. Default: "Link"
 #: ./ftw/slider/browser/pane.pt:38
-#: ./ftw/slider/contents/pane.py:45
+#: ./ftw/slider/contents/pane.py:50
 msgid "label_link"
 msgstr ""
 
@@ -92,22 +97,22 @@ msgid "label_show_title"
 msgstr ""
 
 #. Default: "Next"
-#: ./ftw/slider/browser/slider.py:24
+#: ./ftw/slider/browser/slider.py:25
 msgid "label_slider_next"
 msgstr ""
 
 #. Default: "Pause"
-#: ./ftw/slider/browser/slider.py:23
+#: ./ftw/slider/browser/slider.py:24
 msgid "label_slider_pause"
 msgstr ""
 
 #. Default: "Play"
-#: ./ftw/slider/browser/slider.py:22
+#: ./ftw/slider/browser/slider.py:23
 msgid "label_slider_play"
 msgstr ""
 
 #. Default: "Previous"
-#: ./ftw/slider/browser/slider.py:25
+#: ./ftw/slider/browser/slider.py:26
 msgid "label_slider_prev"
 msgstr ""
 

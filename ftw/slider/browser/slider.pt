@@ -16,7 +16,7 @@
              class="slider-link">
               <div class="sliderImage"
                    tal:define="images pane/@@images"
-                   tal:content="structure python:images.tag(alt='', title='')"
+                   tal:content="structure python:images.tag(alt=getattr(pane, 'image_alt_text', ''), title='')"
                    />
             <div class="sliderText"
                  tal:condition="python: pane.show_title or pane.text">
