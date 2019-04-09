@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-01-16 08:32+0000\n"
+"POT-Creation-Date: 2019-04-09 15:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr "Slider Ordner"
 msgid "Slider Pane"
 msgstr "Slider Bild"
 
-#: ./ftw/slider/browser/slider.py:56
+#: ./ftw/slider/browser/slider.py:60
 msgid "There is already a slider pane in this context"
 msgstr "Es kann jeweils nur ein Slider Ordner erstellt werden"
 
@@ -48,7 +48,7 @@ msgid "Update type settings"
 msgstr ""
 
 #. Default: "It's not possible to add a link and an external url at the same time"
-#: ./ftw/slider/contents/pane.py:61
+#: ./ftw/slider/contents/pane.py:66
 msgid "error_message_links"
 msgstr "Es ist nicht möglich, gleichzeitig einen Link und eine externe URL anzugeben."
 
@@ -56,7 +56,7 @@ msgstr "Es ist nicht möglich, gleichzeitig einen Link und eine externe URL anzu
 msgid "ftw.slider"
 msgstr ""
 
-#: ./ftw/slider/contents/pane.py:46
+#: ./ftw/slider/contents/pane.py:51
 msgid "help_link"
 msgstr ""
 
@@ -66,7 +66,7 @@ msgstr ""
 
 #. Default: "External URL"
 #: ./ftw/slider/browser/pane.pt:42
-#: ./ftw/slider/contents/pane.py:51
+#: ./ftw/slider/contents/pane.py:56
 msgid "label_external_url"
 msgstr "Externe URL"
 
@@ -76,9 +76,14 @@ msgstr "Externe URL"
 msgid "label_image"
 msgstr "Bild"
 
+#. Default: "Image alt text"
+#: ./ftw/slider/contents/pane.py:44
+msgid "label_image_alt_text"
+msgstr "Alternativer Text für das Bild (Für Zugänglichkeit)"
+
 #. Default: "Link"
 #: ./ftw/slider/browser/pane.pt:38
-#: ./ftw/slider/contents/pane.py:45
+#: ./ftw/slider/contents/pane.py:50
 msgid "label_link"
 msgstr "Link"
 
@@ -89,22 +94,22 @@ msgid "label_show_title"
 msgstr "Titel anzeigen"
 
 #. Default: "Next"
-#: ./ftw/slider/browser/slider.py:24
+#: ./ftw/slider/browser/slider.py:25
 msgid "label_slider_next"
 msgstr "Nächstes"
 
 #. Default: "Pause"
-#: ./ftw/slider/browser/slider.py:23
+#: ./ftw/slider/browser/slider.py:24
 msgid "label_slider_pause"
 msgstr "Pause"
 
 #. Default: "Play"
-#: ./ftw/slider/browser/slider.py:22
+#: ./ftw/slider/browser/slider.py:23
 msgid "label_slider_play"
 msgstr "Abspielen"
 
 #. Default: "Previous"
-#: ./ftw/slider/browser/slider.py:25
+#: ./ftw/slider/browser/slider.py:26
 msgid "label_slider_prev"
 msgstr "Vorheriges"
 

@@ -40,6 +40,11 @@ class IPaneSchema(Schema):
         required=True,
         )
 
+    image_alt_text = schema.TextLine(
+        title=_(u'label_image_alt_text', default=u'Image alt text'),
+        required=False
+        )
+
     form.widget(link=ReferenceWidgetFactory)
     link = schema.TextLine(
         title=_(u'label_link', default=u'Link'),

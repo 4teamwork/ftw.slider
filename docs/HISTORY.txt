@@ -5,7 +5,7 @@ Changelog
 3.1.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add new field alt text for images [mathias.leimgruber]
 
 
 3.1.5 (2018-09-25)
