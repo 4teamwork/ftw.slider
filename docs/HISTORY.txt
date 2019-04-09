@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.6 (unreleased)
+3.1.6 (2019-04-09)
 ------------------
 
 - Add new field alt text for images [mathias.leimgruber]
