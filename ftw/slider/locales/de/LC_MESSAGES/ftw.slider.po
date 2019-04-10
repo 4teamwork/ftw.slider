@@ -96,7 +96,7 @@ msgstr "Titel anzeigen"
 #. Default: "Next"
 #: ./ftw/slider/browser/slider.py:25
 msgid "label_slider_next"
-msgstr "Nächstes"
+msgstr "Nächstes Bild"
 
 #. Default: "Pause"
 #: ./ftw/slider/browser/slider.py:24
@@ -111,7 +111,7 @@ msgstr "Abspielen"
 #. Default: "Previous"
 #: ./ftw/slider/browser/slider.py:26
 msgid "label_slider_prev"
-msgstr "Vorheriges"
+msgstr "Vorheriges Bild"
 
 #. Default: "Text"
 #: ./ftw/slider/browser/pane.pt:34
