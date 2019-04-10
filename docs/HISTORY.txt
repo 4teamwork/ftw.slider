@@ -5,7 +5,7 @@ Changelog
 3.1.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Actually use label also as aria-label and improve them. [mathias.leimgruber]
 
 
 3.1.6 (2019-04-09)

@@ -47,8 +47,8 @@ class TestSliderConfig(TestCase):
         self.assertEqual(
             {u'labels': {u'pause': u'Pause',
                          u'play': u'Abspielen',
-                         u'prev': u'Vorheriges',
-                         u'next': u'N\xe4chstes'},
+                         u'prev': u'Vorheriges Bild',
+                         u'next': u'N\xe4chstes Bild'},
              u'is_chuck': True},
             json.loads(browser.css('#slider-panes').first.get('data-settings')))
 

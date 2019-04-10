@@ -18,7 +18,7 @@
       buttonText: false
     }, config);
 
-    var buttonTemplate = '<button type="button" class="slick-{{:action}}" aria-label="{{:action}}"></button>';
+    var buttonTemplate = '<button type="button" class="slick-{{:name}}" aria-label="{{:action}}"></button>';
 
     var play = function() { element.slick("slickPlay"); };
 
@@ -29,7 +29,8 @@
     var prev = function() { element.slick("slickPrev"); };
 
     var buildButton = function(name, label, handler) {
-      var button = $(buttonTemplate.replace(/{{:action}}/g, name));
+      var action = label || name;
+      var button = $(buttonTemplate.replace(/{{:action}}/g, action).replace(/{{:name}}/g, name));
       if(config.buttonText) {
         button.text(label);
       }
