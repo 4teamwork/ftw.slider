@@ -5,7 +5,7 @@ Changelog
 3.1.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add plone 5.1 support and remove portalMessage about redirect. [busykoala]
 
 
 3.1.7 (2019-04-10)
