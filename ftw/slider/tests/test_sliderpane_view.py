@@ -89,20 +89,6 @@ class TestSliderPaneView(TestCase):
         self.assertEquals(self.portal.absolute_url(), browser.url)
 
     @browsing
-    def test_message_for_user_with_edit_permission(self, browser):
-        pane = create(Builder('slider pane')
-                      .within(self.container)
-                      .titled(u'Pane 1')
-                      .having(external_url=self.portal.absolute_url())
-                      .with_dummy_image())
-
-        browser.login().visit(pane)
-        self.assertEquals("You see this page because you have permission to "
-                          "edit this link. Others will be immediately "
-                          "redirected to the link's target URL.",
-                          info_messages()[0])
-
-    @browsing
     def test_internal_url_on_slider_view(self, browser):
         target = create(Builder('folder')
                         .titled(u'Target folder'))

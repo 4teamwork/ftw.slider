@@ -1,0 +1,4 @@
+<object name="portal_types">
+  <object name="ftw.slider.Container" meta_type="Dexterity FTI" />
+  <object name="ftw.slider.Pane" meta_type="Dexterity FTI" />
+</object>
