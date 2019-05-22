@@ -5,7 +5,7 @@ Changelog
 3.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add "random" config parameter to display the slides in a random sort order on each reload. [elioschmutz]
 
 
 3.2.0 (2019-04-18)
