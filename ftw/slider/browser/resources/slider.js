@@ -53,6 +53,12 @@
       element.children("button").remove();
     };
 
+    var shuffle = function(){
+      element.find(".sliderPane").sort(function(){
+        return Math.round(Math.random()) - 0.5;
+      }).detach().appendTo(element);
+    };
+
     var checkResponsive = function() {
       var width = $(window).width();
       var responsiveOption = false;
@@ -86,6 +92,10 @@
 
       if(responsiveConfig) {
         $.extend(config, responsiveConfig);
+      }
+
+      if(config.random) {
+        shuffle();
       }
 
       element.slick(config);

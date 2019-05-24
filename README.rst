@@ -67,6 +67,20 @@ ftw.slider block like:
 
     {"canNext":true, "canPrev":true, "arrowsOnHover":false}
 
+Extended Slick configuration
+============================
+
+In addition to the default slick-configuration options you can use the following `ftw.slider` specific custom options
+
+Random
+------
+
+Shuffles the slides on each page reload to display the slides in a random order.
+
+::
+
+    {"random": true}
+
 
 Screenshots
 ===========
