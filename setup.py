@@ -22,6 +22,7 @@ setup(name='ftw.slider',
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
           'Framework :: Plone :: 4.3',
+          'Framework :: Plone :: 5.1',
           'Framework :: Plone',
           'Programming Language :: Python',
       ],

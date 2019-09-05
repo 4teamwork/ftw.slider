@@ -38,7 +38,7 @@ With ``ftw.simpelayout`` you can install ``ftw.sliderblock`` to get the same fea
 Compatibility
 -------------
 
-Runs with `Plone <http://www.plone.org/>`_ `4.3`.
+Runs with `Plone <http://www.plone.org/>`_ `4.3` and `5.1`.
 
 How to use ftw.slider
 =====================
