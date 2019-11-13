@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="ftw.slider.Pane">
+  <property name="behaviors" purge="False">
+    <element value="plone.app.dexterity.behaviors.metadata.IPublication" />
+  </property>
+</object>
