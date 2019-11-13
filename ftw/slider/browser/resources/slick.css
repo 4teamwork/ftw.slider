@@ -117,3 +117,8 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick-active {
+  z-index: 1;
+  right: -1px;
+}
