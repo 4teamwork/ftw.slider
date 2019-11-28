@@ -1,12 +1,15 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="ftw.slider">
 
-  <browser:resourceDirectory
-      name="ftw.slider"
-      directory="resources" />
+    <plone:static
+        directory="resources"
+        type="plone"
+        name="ftw.slider"
+        />
 
   <browser:page
       for="*"
