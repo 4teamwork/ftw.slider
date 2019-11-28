@@ -62,7 +62,7 @@
         </value>
         <value key="enabled">True</value>
         <value key="depends">plone-legacy</value>
-        <value key="compile">False</value>
+        <value key="compile">True</value>
         <value key="jscompilation">++plone++ftw.slider/ftw-slider-compiled.js</value>
         <value key="csscompilation">++plone++ftw.slider/ftw-slider-compiled.css</value>
         <value key="merge_with">default</value>
