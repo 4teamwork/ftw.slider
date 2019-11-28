@@ -51,21 +51,19 @@
         </value>
     </records>
 
-    <!--bundling of js and css resources-->
-    <records prefix="plone.bundles/ftw-slider-resources"
+    <!--Add js and css resources to plone-legacy bundle
+        This is done by some plone addons, but not sure it is good practise!
+        FIXME: long term fix is to use requirejs in our JS and merge_with 'default' instead
+     -->
+    <records prefix="plone.bundles/plone-legacy"
              interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-        <value key="resources">
+        <value key="resources" purge="False">
             <element>slider_slick_js</element>
             <element>slider_js</element>
             <element>ftw_slider_css</element>
             <element>ftw_slider_slick_css</element>
         </value>
-        <value key="enabled">True</value>
-        <value key="depends">plone-legacy</value>
-        <value key="compile">True</value>
-        <value key="jscompilation">++plone++ftw.slider/ftw-slider-compiled.js</value>
-        <value key="csscompilation">++plone++ftw.slider/ftw-slider-compiled.css</value>
-        <value key="merge_with">default</value>
+        <value key="last_compilation"></value>
     </records>
 
 </registry>
