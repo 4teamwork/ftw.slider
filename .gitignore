@@ -14,3 +14,4 @@ parts/
 src/
 var/
 setup.cfg
+/node_modules/
