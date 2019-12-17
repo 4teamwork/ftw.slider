@@ -1,0 +1,34 @@
+<registry>
+
+    <records prefix="plone.resources/slider_slick_js"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True"/>
+
+    <records prefix="plone.resources/slider_js"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True"/>
+
+    <records prefix="plone.resources/ftw_slider_css"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True"/>
+
+    <records prefix="plone.resources/ftw_slider_slick_css"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True"/>
+
+    <!--bundling of js and css resources-->
+    <records prefix="plone.bundles/ftw-slider-resources"
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+        <value key="resources" purge="True">
+        </value>
+        <value key="enabled">True</value>
+        <value key="depends">plone</value>
+        <value key="stub_js_modules">jquery</value>
+        <value key="compile">False</value>
+        <value key="jscompilation">++resource++ftw.slider/slider-compiled.js</value>
+        <value key="csscompilation">++resource++ftw.slider/slider-compiled.css</value>
+        <value key="last_compilation">2019-12-07 15:25:00</value>
+        <value key="merge_with">default</value>
+    </records>
+
+</registry>

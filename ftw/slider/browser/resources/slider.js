@@ -1,7 +1,12 @@
-(function(global, $) {
-
-  "use strict";
-
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. require the modules we need
+        define(['jquery', 'slick'], factory);
+    } else {
+        // Browser globals
+        root.Slider = factory(window.jQuery, window);
+    }
+}(typeof self !== 'undefined' ? self : this, function ($) {
   var Slider = function(element, config) {
 
     element = $(element);
@@ -142,11 +147,10 @@
 
   };
 
-  global.Slider = Slider;
-
   $(function() {
     var $slider = $("#slider-panes");
     var defaultSlider = new Slider($slider, $slider.data("settings"));
   });
 
-})(window, jQuery);
+  return Slider;
+}));
