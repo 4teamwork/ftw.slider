@@ -8,7 +8,7 @@
     "build": "r.js -o build.js && r.js -o buildcss.js",
     "build-js": "r.js -o build.js",
     "build-css": "r.js -o buildcss.js",
-    "watch": "chokidar \"./ftw/slider/browser/resources/(*.js|*.css)\" -i \"**/*-compiled.(js|css)\" -c \"if [[ '{path}' = *.js ]]; then r.js -o build.js; else r.js -o buildcss.js; fi;\""
+    "watch": "chokidar \"./ftw/slider/browser/resources/(*.js|*.css)\" -i \"**/*-compiled.(js|css)\" -c \"/bin/sh -c \\\"if [[ '{path}' = *.js ]]; then r.js -o build.js; else r.js -o buildcss.js; fi;\\\"\""
   },
   "private": true,
   "devDependencies": {
