@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.1 (unreleased)
+3.4.1 (2019-12-17)
 ------------------
 
 - Provide precompiled bundle [buchi, Nachtalb]
