@@ -5,7 +5,7 @@ Changelog
 3.4.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add ftw.slider portal_types translations to plone domain. [tinagerber]
 
 
 3.4.1 (2019-12-17)
