@@ -9,7 +9,6 @@ tests_require = [
     'ftw.testbrowser',
     'plone.app.testing',
     'plone.resource',
-    'unittest2',
 ]
 
 setup(name='ftw.slider',
