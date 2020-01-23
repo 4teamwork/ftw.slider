@@ -1,7 +1,7 @@
 import transaction
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
-from unittest2 import TestCase
+from unittest import TestCase
 
 from ftw.slider.testing import SLIDER_FUNCTIONAL_TESTING
 

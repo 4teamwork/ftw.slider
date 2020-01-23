@@ -6,7 +6,7 @@ from ftw.testbrowser.pages import factoriesmenu
 from ftw.testbrowser.pages import plone
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-from unittest2 import TestCase
+from unittest import TestCase
 import transaction
 
 
