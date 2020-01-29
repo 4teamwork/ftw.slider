@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.3 (unreleased)
+3.4.3 (2020-01-29)
 ------------------
 
 - Remove unittest2. [busykoala]
