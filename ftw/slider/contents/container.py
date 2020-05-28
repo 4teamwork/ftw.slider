@@ -1,6 +1,6 @@
 from ftw.slider import _
 from ftw.slider.interfaces import IContainer
-from plone.dexterity.content import Container
+from plone.dexterity.content import Container as DxContainer
 from plone.directives.form import Schema
 from zope import schema
 from zope.interface import implements
@@ -33,5 +33,5 @@ class IContainerSchema(Schema):
     )
 
 
-class Topic(Container):
+class Container(DxContainer):
     implements(IContainer)

@@ -5,7 +5,8 @@ Changelog
 3.4.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove plone.app.referenceablebehavior in plone 5. [busykoala]
+- Implement the IContainer interface for the slider container. [busykoala]
 
 
 3.4.3 (2020-01-29)
