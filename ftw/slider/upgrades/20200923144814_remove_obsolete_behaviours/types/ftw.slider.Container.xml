@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="ftw.slider.Container"
+  meta_type="Dexterity FTI"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:zcml="http://xml.zope.org/namespaces/zcml"
+  i18n:domain="ftw.slider" >
+  <!-- enabled behaviors -->
+  <property name="behaviors">
+    <element value="plone.multilingualbehavior.interfaces.IDexterityTranslatable" remove="True" />
+  </property>
+</object>
