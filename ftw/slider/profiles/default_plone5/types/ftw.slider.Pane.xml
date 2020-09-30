@@ -27,8 +27,6 @@
   <!-- enabled behaviors -->
   <property name="behaviors">
     <element value="plone.app.content.interfaces.INameFromTitle" />
-    <element zcml:condition="installed plone.multilingualbehavior"
-             value="plone.multilingualbehavior.interfaces.IDexterityTranslatable" />
   </property>
 
   <!-- View information -->
