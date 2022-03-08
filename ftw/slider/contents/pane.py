@@ -6,7 +6,7 @@ from plone.app.textfield import RichText
 from plone.dexterity.content import Container
 from plone.directives import form
 from plone.directives.form import Schema
-from plone.namedfile.field import NamedImage
+from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from zope import schema
 from zope.interface import Invalid
@@ -43,7 +43,7 @@ class IPaneSchema(Schema):
         )
 
     model.primary('image')
-    image = NamedImage(
+    image = NamedBlobImage(
         title=_(u'label_image', default='Image'),
         required=True,
         )
