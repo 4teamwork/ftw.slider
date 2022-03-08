@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.6 (unreleased)
+3.5.0 (2022-03-08)
 ------------------
 
 - Migrate images to blobs. [mathias.leimgruber]
