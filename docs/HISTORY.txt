@@ -5,7 +5,7 @@ Changelog
 3.5.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix upgrade step from 3.4.5, since it accidentally removes all behabiors. [mathias.leimgruber]
 
 
 3.5.0 (2022-03-08)

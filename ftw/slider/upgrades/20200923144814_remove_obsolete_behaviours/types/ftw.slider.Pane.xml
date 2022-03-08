@@ -4,7 +4,7 @@
         xmlns:i18n="http://xml.zope.org/namespaces/i18n"
         xmlns:zcml="http://xml.zope.org/namespaces/zcml"
         i18n:domain="ftw.slider">
-  <property name="behaviors">
+  <property name="behaviors" purge="False">
     <element value="plone.multilingualbehavior.interfaces.IDexterityTranslatable" remove="True" />
   </property>
 </object>
