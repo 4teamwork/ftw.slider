@@ -1,9 +1,9 @@
 from ftw.slider import _
 from ftw.slider.interfaces import IContainer
 from plone.dexterity.content import Container as DxContainer
-from plone.directives.form import Schema
+from plone.supermodel import model
 from zope import schema
-from zope.interface import implements
+from zope.interface import implementer
 import json
 
 
@@ -16,7 +16,7 @@ def validate_slick_config(value):
     return True
 
 
-class IContainerSchema(Schema):
+class IContainerSchema(model.Schema):
     slick_config = schema.Text(
         title=_(u'slick_config_label', default=u'Configuration'),
         description=_(u'slick_config_description',
@@ -33,5 +33,6 @@ class IContainerSchema(Schema):
     )
 
 
+@implementer(IContainer)
 class Container(DxContainer):
-    implements(IContainer)
+    """ """

@@ -5,7 +5,7 @@ Changelog
 3.5.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Plone5.2/6 and Python3 compatibility. [gbastien]
 
 
 3.5.1 (2022-03-08)

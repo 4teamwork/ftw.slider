@@ -28,7 +28,7 @@ class SliderView(BrowserView):
 
         user_config = config.get('labels', {})
 
-        for label, message in labels.iteritems():
+        for label, message in labels.items():
             if label not in user_config:
                 user_config[label] = translate(message, context=self.request)
 
