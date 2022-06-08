@@ -3,14 +3,13 @@ from ftw.slider import _
 from ftw.slider.interfaces import IPane
 from pkg_resources import get_distribution
 from plone.app.textfield import RichText
+from plone.autoform import directives
 from plone.dexterity.content import Container
-from plone.directives import form
-from plone.directives.form import Schema
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from zope import schema
 from zope.interface import Invalid
-from zope.interface import implements
+from zope.interface import implementer
 from zope.interface.interface import invariant
 
 
@@ -22,7 +21,7 @@ else:
     from Products.CMFPlone import PloneMessageFactory as _PMF
 
 
-class IPaneSchema(Schema):
+class IPaneSchema(model.Schema):
 
     title = schema.TextLine(
         title=_PMF(u'label_title', default=u'Title'),
@@ -53,7 +52,7 @@ class IPaneSchema(Schema):
         required=False
         )
 
-    form.widget(link=ReferenceWidgetFactory)
+    directives.widget('link', ReferenceWidgetFactory)
     link = schema.TextLine(
         title=_(u'label_link', default=u'Link'),
         description=_(u'help_link', default=u''),
@@ -78,5 +77,6 @@ class IPaneSchema(Schema):
             )
 
 
+@implementer(IPane)
 class Pane(Container):
-    implements(IPane)
+    """ """
